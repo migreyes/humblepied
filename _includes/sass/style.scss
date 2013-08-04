@@ -28,13 +28,26 @@ a {
   margin: 1.5rem auto 1rem;
 
   h1 {
+    @include transition(all .2s ease);
     font-size: 1.5rem;
     letter-spacing: -1px;
     line-height: .8rem;
     margin-bottom: .5rem;
 
-    a { color: #555; }
-    a:hover { color: $color-green; }
+    a {
+      @include transition(all .2s ease);
+      background: url('/assets/images/icon.png') 8.2rem .4rem no-repeat;
+      background-size: 26px 16px;
+      display: block;
+      color: #555;
+      padding: .5rem 0 .1rem;
+
+
+      &:hover {
+        background-position: 8.5rem .4rem;
+        color: $color-green;
+      }
+    }
   }
 
   h2 {
@@ -79,9 +92,15 @@ a {
       margin-bottom: .75rem;
 
       a {
-        display: inline-block;
+        background-size: 40px 25px;
+        background-position: 13rem .6rem;
+        display: block;
         margin: -1rem;
         padding: 1rem;
+
+        &:hover {
+          background-position: 13.5rem .6rem;
+        }
       }
     }
 
