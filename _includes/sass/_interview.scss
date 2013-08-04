@@ -94,7 +94,12 @@
 }
 
 // --------------------------- *
-@include responsive-break-point(640px) {
+@include responsive-break-point(321px) {
+
+}
+
+// --------------------------- *
+@include responsive-break-point(641px) {
   #guest-details {
     margin-bottom: 1rem;
     position: relative;

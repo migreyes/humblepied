@@ -62,7 +62,7 @@ a {
 }
 
 // --------------------------- *
-@include responsive-break-point(640px) {
+@include responsive-break-point(641px) {
   body { padding: 0 3rem; }
 
   #site-header {
