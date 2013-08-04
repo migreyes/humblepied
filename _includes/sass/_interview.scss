@@ -94,7 +94,7 @@
 // --------------------------- *
 @include responsive-break-point(640px) {
   #guest-details {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     position: relative;
   }
 
@@ -134,6 +134,7 @@
 
   #guest-bio {
     float: right;
+    margin-top: 1.75rem;
     width: 20rem;
 
     .biography, ul { margin-bottom: 2rem; }
