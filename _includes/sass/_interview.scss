@@ -111,6 +111,7 @@
 }
 
 #guest-quote {
+  @include animate(fade-in 1s .5s both);
   font-family: $font-tisa;
   font-size: 2.25rem;
   letter-spacing: -.15rem;
