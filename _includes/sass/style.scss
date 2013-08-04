@@ -62,6 +62,12 @@ a {
 }
 
 // --------------------------- *
+@include responsive-break-point(321px) {
+
+  body { padding: 0 2rem; }
+}
+
+// --------------------------- *
 @include responsive-break-point(641px) {
   body { padding: 0 3rem; }
 
