@@ -9,4 +9,4 @@ vimeo: 36506577
 quote: Don’t compromise, and don’t take no for an answer.
 ---
 
- Debbie Millman is a writer, educator, artist, brand consultant and host of the radio show Design Matters. She serves as the President of the design division at Sterling Brands.
+Debbie Millman is a writer, educator, artist, brand consultant and host of the radio show Design Matters. She serves as the President of the design division at Sterling Brands.

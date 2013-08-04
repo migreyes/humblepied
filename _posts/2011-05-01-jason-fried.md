@@ -9,4 +9,4 @@ vimeo: 23119508
 quote: Make something for yourself.
 ---
 
- Jason is the co-founder and president of 37signals out of Chicago. Where they once used to do client work, they now focus on creating smart, simple and beautiful web apps geared toward collaboration and productivity. Jason also has co-authored bestselling books including "Rework," which reconsiders the nature of working and creating.
+Jason is the co-founder and president of 37signals out of Chicago. Where they once used to do client work, they now focus on creating smart, simple and beautiful web apps geared toward collaboration and productivity. Jason also has co-authored bestselling books including "Rework," which reconsiders the nature of working and creating.
