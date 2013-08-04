@@ -3,7 +3,11 @@
 <!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
-  <title>{{ site.title }}</title>
+  {% if page.layout == "interview" %}
+    <title>Advice by {{ page.title }} with Mig Reyes on {{ site.title }}</title>
+  {% else %}
+    <title>Inspirational advice on {{ site.title }}</title>
+  {% endif %}
   <link rel="stylesheet" type="text/css" href="/assets/stylesheets/style.css">
   <link rel="icon" type="image/gif" href="/assets/favicon.gif" />
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
