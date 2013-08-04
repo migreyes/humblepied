@@ -5,6 +5,6 @@ $ ->
 
     switch event.keyCode
       when 37
-        window.location.href = $previous unless $previous is undefined
+        $('#guest').load($previous + ' #guest') unless $previous is undefined
       when 39
-        window.location.href = $next unless $next is undefined
+        $('#guest').load($next + ' #guest') unless $next is undefined
