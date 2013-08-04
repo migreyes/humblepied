@@ -51,6 +51,7 @@ a {
   }
 
   h2 {
+    @include transition(all .2s ease);
     color: #666;
     font-family: $font-tisa;
     font-size: .9rem;

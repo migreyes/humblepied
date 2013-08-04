@@ -8,6 +8,7 @@
 }
 
 .guest-preview {
+  @include transition(all 1s ease);
   display: block;
   margin-bottom: 2rem;
   width: 100%;
