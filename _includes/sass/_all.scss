@@ -18,14 +18,8 @@
     width: 100%;
 
     img {
-      @include transition(all .2s ease);
       height: auto;
       width: 100%;
-    }
-
-    &:hover {
-
-      img { margin: -.3rem 0 .3rem; }
     }
   }
 }
