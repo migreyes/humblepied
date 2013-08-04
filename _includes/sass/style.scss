@@ -1,0 +1,96 @@
+@import "reset";
+@import "mixins";
+
+body {
+  @include border-box;
+  @include font-smoothing(antialiased);
+  color: #666;
+  font-family: $font-dagny;
+  padding: 0 20px;
+}
+
+a {
+  @include transition(all .2s ease);
+  color: $color-green;
+  text-decoration: none;
+
+  &:hover { text-decoration: none; }
+}
+
+#site-header,
+#site-footer {
+  line-height: 1.25em;
+  margin: 2rem auto;
+  max-width: 960px;
+  width: 100%;
+}
+
+#site-header {
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: .5rem;
+    line-height: 1rem;
+
+    a { color: #333; }
+    a:hover { color: $color-green; }
+  }
+
+  h2 {
+    color: #666;
+    font-family: $font-tisa;
+    font-size: 1.1rem;
+    font-style: italic;
+    font-weight: normal;
+  }
+
+  ul { margin: 0 0 0 -.5rem; }
+
+  li {
+    font-size: .7rem;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    a {
+      color: #666;
+      padding: .5rem;
+
+      &:visited { color: #666; }
+      &:hover { color: $color-green; }
+      &:active { color: #666; }
+    }
+  }
+}
+
+// --------------------------- *
+@include responsive-break-point(640px) {
+  #site-header {
+    @include clearfix;
+
+    h1, h2 { float: left; }
+
+    h2 { clear: left; }
+
+    nav {
+      float: right;
+      width: 20rem;
+
+      li { display: inline-block; }
+    }
+  }
+
+  #site-footer {
+
+    ul { margin-bottom: .5rem; }
+
+    li { display: inline-block; }
+    li:last-child:before {
+      content: ' / ';
+      color: #999;
+    }
+  }
+}
+
+@import "all";
+@import "interview";
+@import "about";

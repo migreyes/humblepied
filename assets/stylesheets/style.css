@@ -1,0 +1,314 @@
+@charset "UTF-8";
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  margin: 0;
+  padding: 0; }
+
+body {
+  line-height: 1; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+nav ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: none; }
+
+a {
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  margin: 0;
+  padding: 0; }
+
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none; }
+
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: 700; }
+
+del {
+  text-decoration: line-through; }
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0; }
+
+input, select {
+  vertical-align: middle; }
+
+body {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  color: #666;
+  font-family: "ff-dagny-web-pro-1", "ff-dagny-web-pro-2", Tahoma, Helvetica, sans-serif;
+  padding: 0 20px; }
+
+a {
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  color: #5dc20e;
+  text-decoration: none; }
+  a:hover {
+    text-decoration: none; }
+
+#site-header,
+#site-footer {
+  line-height: 1.25em;
+  margin: 2rem auto;
+  max-width: 960px;
+  width: 100%; }
+
+#site-header h1 {
+  font-size: 2rem;
+  margin-bottom: .5rem;
+  line-height: 1rem; }
+  #site-header h1 a {
+    color: #333; }
+  #site-header h1 a:hover {
+    color: #5dc20e; }
+#site-header h2 {
+  color: #666;
+  font-family: "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", Georgia, Times, serif;
+  font-size: 1.1rem;
+  font-style: italic;
+  font-weight: normal; }
+#site-header ul {
+  margin: 0 0 0 -.5rem; }
+#site-header li {
+  font-size: .7rem;
+  font-weight: bold;
+  text-transform: uppercase; }
+  #site-header li a {
+    color: #666;
+    padding: .5rem; }
+    #site-header li a:visited {
+      color: #666; }
+    #site-header li a:hover {
+      color: #5dc20e; }
+    #site-header li a:active {
+      color: #666; }
+
+@media only screen and (min-width: 640px) {
+  #site-header {
+    zoom: 1; }
+    #site-header:after {
+      content: ".";
+      display: block;
+      height: 0;
+      clear: both;
+      visibility: hidden; }
+    #site-header h1, #site-header h2 {
+      float: left; }
+    #site-header h2 {
+      clear: left; }
+    #site-header nav {
+      float: right;
+      width: 20rem; }
+      #site-header nav li {
+        display: inline-block; }
+
+  #site-footer ul {
+    margin-bottom: .5rem; }
+  #site-footer li {
+    display: inline-block; }
+  #site-footer li:last-child:before {
+    content: ' / ';
+    color: #999; } }
+#guests {
+  margin: 0 auto;
+  max-width: 960px;
+  width: 100%; }
+
+.guest-preview {
+  display: block;
+  width: 100%; }
+  .guest-preview figure {
+    width: 100%; }
+    .guest-preview figure img {
+      height: auto;
+      width: 100%; }
+
+@media only screen and (min-width: 640px) {
+  #guests {
+    text-align: center; }
+
+  .guest-preview {
+    display: inline-block;
+    margin: 0 1.5rem 2rem 0;
+    text-align: left;
+    vertical-align: top;
+    width: 30%; }
+    .guest-preview:nth-child(n+3) {
+      margin-right: 0; }
+    .guest-preview .guest-preview-quote {
+      color: #666;
+      font-family: "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", Georgia, Times, serif;
+      font-size: 1.2rem;
+      line-height: 1.2em; } }
+#guest {
+  margin: 0 auto;
+  max-width: 960px;
+  width: 100%; }
+
+#guest-details h3, #guest-details .guest-nav-pagination {
+  color: #5dc20e;
+  display: block;
+  font-size: .7rem;
+  font-weight: bold;
+  margin-bottom: .5rem;
+  letter-spacing: 1px;
+  text-transform: uppercase; }
+#guest-details ul {
+  margin: 0; }
+#guest-details h4, #guest-details li p {
+  font-family: "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", Georgia, Times, serif;
+  font-size: .8rem;
+  font-weight: normal; }
+
+#guest-nav a {
+  background: white;
+  display: block;
+  padding: 1rem; }
+  #guest-nav a p {
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    color: #333; }
+  #guest-nav a:hover {
+    background: rgba(93, 194, 14, 0.2); }
+    #guest-nav a:hover p {
+      color: #5dc20e; }
+
+.embedded-video {
+  height: 0;
+  padding: 0 0 56.25% 0;
+  position: relative;
+  max-width: 612px; }
+  .embedded-video iframe {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%; }
+
+#guest-bio h5, #guest-bio h6 {
+  color: #5dc20e;
+  font-family: "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", Georgia, Times, serif;
+  font-size: .8rem;
+  font-weight: normal;
+  letter-spacing: 2px;
+  margin-bottom: .5rem;
+  text-transform: uppercase; }
+#guest-bio li {
+  list-style: none; }
+#guest-bio .guest-website:before {
+  content: 'Website, '; }
+#guest-bio .guest-twitter:before {
+  content: 'Twitter, '; }
+#guest-bio .video-length,
+#guest-bio .delivered {
+  font-size: .8rem;
+  margin-bottom: .5rem; }
+
+#guest-quote {
+  font-size: 2rem;
+  margin-bottom: 2rem; }
+
+@media only screen and (min-width: 640px) {
+  #guest-details {
+    margin-bottom: 2rem;
+    position: relative; }
+
+  #guest-nav {
+    position: absolute;
+    right: 1rem;
+    top: -1rem;
+    width: 20rem; }
+    #guest-nav li {
+      display: inline-block;
+      width: 8rem; }
+
+  #guest-presentation {
+    zoom: 1;
+    margin-bottom: 2rem; }
+    #guest-presentation:after {
+      content: ".";
+      display: block;
+      height: 0;
+      clear: both;
+      visibility: hidden; }
+
+  #guest-video {
+    float: left;
+    height: 483px;
+    width: 612px; }
+    #guest-video .embedded-video {
+      height: 483px;
+      padding: 0;
+      width: 612px; }
+    #guest-video iframe {
+      height: 100%;
+      width: 100%; }
+
+  #guest-bio {
+    float: right;
+    width: 20rem; }
+    #guest-bio .biography, #guest-bio ul {
+      margin-bottom: 2rem; }
+    #guest-bio .biography, #guest-bio li {
+      font-size: .9rem;
+      line-height: 1.2rem; }
+
+  #guest-quote {
+    font-family: "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", Georgia, Times, serif;
+    font-size: 4.5rem;
+    letter-spacing: -.15rem;
+    line-height: 1em;
+    margin-bottom: 4rem;
+    position: relative; }
+    #guest-quote:before {
+      content: '“';
+      left: -2.25rem;
+      position: absolute;
+      top: -.5rem; } }
+#about {
+  margin: 0 auto;
+  max-width: 960px;
+  width: 100%; }
+
+@media only screen and (min-width: 640px) {
+  #about {
+    margin-bottom: 2rem; } }

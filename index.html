@@ -1,0 +1,14 @@
+---
+layout: default
+---
+<section id="guests">
+  {% for interview in site.posts %}
+    <a href="{{ interview.url }}" class="guest-preview">
+      <figure>
+        <img src="/assets/images/guests{{ interview.id }}.jpg"/>
+        <figcaption>{{ interview.title }}</figcaption>
+      </figure>
+      <p class="guest-preview-quote">{{ interview.quote }}</p>
+    </a>
+  {% endfor %}
+</section>

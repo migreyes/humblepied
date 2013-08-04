@@ -1,0 +1,14 @@
+@import "mixins";
+
+#about {
+  margin: 0 auto;
+  max-width: 960px;
+  width: 100%;
+}
+
+// --------------------------- *
+@include responsive-break-point(640px) {
+  #about {
+    margin-bottom: 2rem;
+  }
+}

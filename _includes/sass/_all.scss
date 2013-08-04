@@ -1,0 +1,45 @@
+@import "mixins";
+
+#guests {
+  margin: 0 auto;
+  max-width: 960px;
+  width: 100%;
+}
+
+.guest-preview {
+  display: block;
+  width: 100%;
+
+  figure {
+    width: 100%;
+
+    img {
+      height: auto;
+      width: 100%;
+    }
+  }
+}
+
+// --------------------------- *
+@include responsive-break-point(640px) {
+  #guests {
+    text-align: center;
+  }
+
+  .guest-preview {
+    display: inline-block;
+    margin: 0 1.5rem 2rem 0;
+    text-align: left;
+    vertical-align: top;
+    width: 30%;
+
+    &:nth-child(n+3) { margin-right: 0; }
+
+    .guest-preview-quote {
+      color: #666;
+      font-family: $font-tisa;
+      font-size: 1.2rem;
+      line-height: 1.2em;
+    }
+  }
+}

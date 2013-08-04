@@ -1,0 +1,162 @@
+@import "mixins";
+
+#guest {
+  margin: 0 auto;
+  max-width: 960px;
+  width: 100%;
+}
+
+#guest-details {
+
+  h3, .guest-nav-pagination {
+    color: $color-green;
+    display: block;
+    font-size: .7rem;
+    font-weight: bold;
+    margin-bottom: .5rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  ul { margin: 0; }
+
+  h4, li p {
+    font-family: $font-tisa;
+    font-size: .8rem;
+    font-weight: normal;
+  }
+}
+
+#guest-nav {
+
+  a {
+    background: white;
+    display: block;
+    padding: 1rem;
+
+    p {
+      @include transition(all .2s ease);
+      color: #333;
+    }
+
+    &:hover {
+      background: rgba(93, 194, 14, .2);
+
+      p { color: $color-green; }
+    }
+  }
+}
+
+.embedded-video {
+  height: 0;
+  padding: 0 0 56.25% 0;
+  position: relative;
+  max-width: 612px;
+
+  iframe {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+}
+
+#guest-bio {
+
+  h5, h6 {
+    color: $color-green;
+    font-family: $font-tisa;
+    font-size: .8rem;
+    font-weight: normal;
+    letter-spacing: 2px;
+    margin-bottom: .5rem;
+    text-transform: uppercase;
+  }
+
+  li { list-style: none; }
+
+  .guest-website:before { content: 'Website, '}
+  .guest-twitter:before { content: 'Twitter, '}
+
+  .video-length,
+  .delivered {
+    font-size: .8rem;
+    margin-bottom: .5rem;
+  }
+}
+
+#guest-quote {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+// --------------------------- *
+@include responsive-break-point(640px) {
+  #guest-details {
+    margin-bottom: 2rem;
+    position: relative;
+  }
+
+  #guest-nav {
+    position: absolute;
+    right: 1rem;
+    top: -1rem;
+    width: 20rem;
+
+    li {
+      display: inline-block;
+      width: 8rem;
+    }
+  }
+
+  #guest-presentation {
+    @include clearfix;
+    margin-bottom: 2rem;
+  }
+
+  #guest-video {
+    float: left;
+    height: 483px;
+    width: 612px;
+
+    .embedded-video {
+      height: 483px;
+      padding: 0;
+      width: 612px;
+    }
+
+    iframe {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  #guest-bio {
+    float: right;
+    width: 20rem;
+
+    .biography, ul { margin-bottom: 2rem; }
+
+    .biography, li {
+      font-size: .9rem;
+      line-height: 1.2rem;
+    }
+  }
+
+  #guest-quote {
+    font-family: $font-tisa;
+    font-size: 4.5rem;
+    letter-spacing: -.15rem;
+    line-height: 1em;
+    margin-bottom: 4rem;
+    position: relative;
+
+    &:before {
+      content: '“';
+      left: -2.25rem;
+      position: absolute;
+      top: -.5rem;
+    }
+  }
+}
