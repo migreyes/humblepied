@@ -7,5 +7,6 @@ auto: true
 source: .
 exclude: [.DS_Store, .gitignore, .sass-cache, _drafts, _site, public, Gemfile, Gemfile.lock, Rakefile, README.md]
 
+permalink: /:categories/:title
 markdown: rdiscount
 pygments: true

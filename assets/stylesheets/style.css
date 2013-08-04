@@ -86,66 +86,38 @@ a {
 #site-header,
 #site-footer {
   line-height: 1.25em;
-  margin: 2rem auto;
   max-width: 960px;
   width: 100%; }
 
-#site-header h1 {
-  font-size: 2rem;
-  margin-bottom: .5rem;
-  line-height: 1rem; }
-  #site-header h1 a {
+#site-header {
+  margin: 2rem auto; }
+  #site-header a:hover {
     color: #333; }
-  #site-header h1 a:hover {
-    color: #5dc20e; }
-#site-header h2 {
-  color: #666;
-  font-family: "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", Georgia, Times, serif;
-  font-size: 1.1rem;
-  font-style: italic;
-  font-weight: normal; }
-#site-header ul {
-  margin: 0 0 0 -.5rem; }
-#site-header li {
-  font-size: .7rem;
-  font-weight: bold;
-  text-transform: uppercase; }
-  #site-header li a {
+  #site-header h1 {
+    font-size: 2.1rem;
+    letter-spacing: -.1rem;
+    line-height: 1rem;
+    margin-bottom: .75rem; }
+  #site-header h2 {
     color: #666;
-    padding: .5rem; }
-    #site-header li a:visited {
-      color: #666; }
-    #site-header li a:hover {
-      color: #5dc20e; }
-    #site-header li a:active {
-      color: #666; }
+    font-family: "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", Georgia, Times, serif;
+    font-size: 1.3rem;
+    font-style: italic;
+    font-weight: normal; }
 
 @media only screen and (min-width: 640px) {
   #site-header {
-    zoom: 1; }
-    #site-header:after {
-      content: ".";
-      display: block;
-      height: 0;
-      clear: both;
-      visibility: hidden; }
-    #site-header h1, #site-header h2 {
-      float: left; }
-    #site-header h2 {
-      clear: left; }
-    #site-header nav {
-      float: right;
-      width: 20rem; }
-      #site-header nav li {
-        display: inline-block; }
+    margin-bottom: 3rem; }
 
-  #site-footer ul {
-    margin-bottom: .5rem; }
-  #site-footer li {
-    display: inline-block; }
-  #site-footer li:last-child:before {
-    content: ' / ';
-    color: #999; } }
+  #site-footer {
+    margin: 2rem auto; }
+    #site-footer ul {
+      margin-bottom: .5rem; }
+    #site-footer li {
+      display: inline-block; }
+    #site-footer li:last-child:before {
+      content: ' / ';
+      color: #999; } }
 #guests {
   margin: 0 auto;
   max-width: 960px;
