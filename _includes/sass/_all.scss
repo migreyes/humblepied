@@ -3,11 +3,13 @@
 #guests {
   margin: 0 auto;
   max-width: 960px;
+  text-align: center;
   width: 100%;
 }
 
 .guest-preview {
   display: block;
+  margin-bottom: 2rem;
   width: 100%;
 
   figure {
@@ -29,11 +31,8 @@
 // --------------------------- *
 @include responsive-break-point(321px) {
 
-  #guests { text-align: center; }
-
   .guest-preview {
     display: inline-block;
-    margin-bottom: 2rem;
     text-align: left;
     vertical-align: top;
     width: 45%;
