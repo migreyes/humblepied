@@ -54,6 +54,7 @@
 }
 
 #guest-presentation {
+  @include animate(fade-in-up .5s .5s both);
 
   hr { display: none; }
 }
