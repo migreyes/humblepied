@@ -159,6 +159,8 @@
     width: 20rem;
 
     li { width: 9.5rem; }
+
+    a { @include transition(all .25s ease); }
   }
 
   #guest-presentation {
