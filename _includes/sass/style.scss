@@ -71,11 +71,23 @@ a {
       }
     }
 
-    h2 { line-height: 1.2em; }
+    h2 {
+      line-height: 1.2em;
+
+      a {
+        margin: -.5rem;
+        padding: .5rem;
+      }
+    }
   }
 
   #site-footer {
     margin: 2rem auto;
+
+    a {
+      margin: -.5rem;
+      padding: .5rem;
+    }
 
     ul { margin-bottom: .5rem; }
 
