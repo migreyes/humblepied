@@ -13,9 +13,13 @@ $ ->
     switch event.keyCode
       when 37
         unless $previousUrl is undefined
-          $('#guest').load($previousUrl + ' #guest')
+          $('#content').load($previousUrl + ' #guest')
           loadInterview $previous.find('p').html(), $previousUrl
       when 39
         unless $nextUrl is undefined
-          $('#guest').load($nextUrl + ' #guest')
+          $('#content').load($nextUrl + ' #guest')
           loadInterview $next.find('p').html(), $nextUrl
+      when 72
+        $('#content').load('/index.html #guests')
+        document.title = "Inspirational advice on Humble Pied."
+        window.history.pushState('guest', '', '/')
