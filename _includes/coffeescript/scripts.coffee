@@ -21,7 +21,7 @@ $ ->
       when 65
         $('#content').load('/about/index.html #about')
         document.title = "About Humble Pied."
-        window.history.pushState('all', '', '/about')
+        window.history.pushState('about', '', '/about')
       when 72
         $('#content').load('/index.html #guests')
         document.title = "Inspirational advice on Humble Pied."
