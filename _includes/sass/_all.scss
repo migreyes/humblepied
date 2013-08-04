@@ -39,5 +39,7 @@
       font-size: 1.2rem;
       line-height: 1.2em;
     }
+
+    &:nth-child(3n+3) { margin-right: 0; }
   }
 }

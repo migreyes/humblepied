@@ -59,6 +59,10 @@ a {
 
 // --------------------------- *
 @include responsive-break-point(640px) {
+  body {
+    padding: 0 3rem;
+  }
+
   #site-header {
     margin-bottom: 3rem;
 
