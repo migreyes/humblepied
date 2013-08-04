@@ -36,7 +36,7 @@
 
     p {
       @include transition(all .2s ease);
-      color: #333;
+      color: #666;
     }
 
     &:hover {
@@ -103,8 +103,8 @@
 
   #guest-nav {
     position: absolute;
-    right: 1rem;
-    top: -1rem;
+    right: .75rem;
+    top: -.75rem;
     width: 20rem;
 
     li {
