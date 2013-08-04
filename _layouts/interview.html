@@ -3,11 +3,11 @@
     {% include header.html %}
 
     <section id="guest">
-      <header id="guest-details">
+      <header id="guest-header">
         <h3>{{ page.title }}</h3>
         <h4>{{ page.label }}</h4>
 
-        <ul id="guest-nav">
+        <ul class="guest-nav">
           {% if page.previous %}
             <li>
               <a href="{{ page.previous.url }}">
@@ -19,10 +19,10 @@
 
           {% if page.next %}
             <li>
-                <a href="{{ page.next.url }}">
-                  <span class="guest-nav-pagination">Next</span>
-                  <p>{{ page.next.title }}</p>
-                </a>
+              <a href="{{ page.next.url }}">
+                <span class="guest-nav-pagination">Next</span>
+                <p>{{ page.next.title }}</p>
+              </a>
             </li>
           {% endif %}
         </ul>
@@ -54,6 +54,28 @@
       </article>
 
       <blockquote id="guest-quote">{{ page.quote }}</blockquote>
+
+      <footer id="guest-footer">
+        <ul class="guest-nav">
+          {% if page.previous %}
+            <li>
+              <a href="{{ page.previous.url }}">
+                <span class="guest-nav-pagination">Previous</span>
+                <p>{{ page.previous.title }}</p>
+              </a>
+            </li>
+          {% endif %}
+
+          {% if page.next %}
+            <li>
+              <a href="{{ page.next.url }}">
+                <span class="guest-nav-pagination">Next</span>
+                <p>{{ page.next.title }}</p>
+              </a>
+            </li>
+          {% endif %}
+        </ul>
+      </footer>
     </section>
 
     {% include footer.html %}

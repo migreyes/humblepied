@@ -6,11 +6,12 @@
   width: 100%;
 }
 
-#guest-details {
+#guest-header {
+
+  h3, h4, .guest-nav { display: none; }
 
   h3, .guest-nav-pagination {
     color: $color-green;
-    display: block;
     font-size: .7rem;
     font-weight: bold;
     margin-bottom: .5rem;
@@ -25,11 +26,16 @@
     font-size: .8rem;
     font-weight: normal;
   }
+
+  .guest-nav-pagination { display: block; }
 }
 
-#guest-nav {
+.guest-nav {
+
+  li { display: inline-block; }
 
   a {
+    @include border-box;
     background: white;
     display: block;
     padding: .75rem;
@@ -76,6 +82,13 @@
     text-transform: uppercase;
   }
 
+  .biography, ul { margin-bottom: 2rem; }
+
+  .biography, li {
+    font-size: .9rem;
+    line-height: 1.2rem;
+  }
+
   li { list-style: none; }
 
   .guest-website:before { content: 'Website, '}
@@ -86,11 +99,17 @@
     font-size: .8rem;
     margin-bottom: .5rem;
   }
+
+  .share-on-twitter { display: none; }
 }
 
 #guest-quote {
   font-size: 2rem;
   margin-bottom: 2rem;
+}
+
+#guest-footer {
+
 }
 
 // --------------------------- *
@@ -100,21 +119,20 @@
 
 // --------------------------- *
 @include responsive-break-point(641px) {
-  #guest-details {
+  #guest-header {
     margin-bottom: 1rem;
     position: relative;
+
+    h3, h4, .guest-nav { display: block; }
   }
 
-  #guest-nav {
+  .guest-nav {
     position: absolute;
     right: .75rem;
     top: -.75rem;
     width: 20rem;
 
-    li {
-      display: inline-block;
-      width: 9.5rem;
-    }
+    li { width: 9.5rem; }
   }
 
   #guest-presentation {
@@ -125,7 +143,8 @@
   #guest-video {
     float: left;
     height: auto;
-    width: 612px;
+    max-width: 612px;
+    width: 100%;
   }
 
   #guest-bio {
@@ -133,14 +152,10 @@
     margin-top: 1.75rem;
     width: 20rem;
 
-    .biography, ul { margin-bottom: 2rem; }
-
-    .biography, li {
-      font-size: .9rem;
-      line-height: 1.2rem;
+    .share-on-twitter {
+      display: block;
+      margin-top: 1rem;
     }
-
-    .share-on-twitter { margin-top: 1rem; }
   }
 
   #guest-quote {
@@ -159,4 +174,6 @@
       top: -.5rem;
     }
   }
+
+  #guest-footer { display: none; }
 }
