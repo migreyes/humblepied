@@ -47,18 +47,21 @@
   }
 }
 
-.embedded-video {
-  height: 0;
-  padding: 0 0 56.25% 0;
-  position: relative;
-  max-width: 612px;
+#guest-video {
 
-  iframe {
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
+  .embedded-video {
+    height: 0;
+    padding-bottom: 79.2%;
+    overflow: hidden;
+    position: relative;
+
+    iframe {
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
   }
 }
 
@@ -117,19 +120,8 @@
 
   #guest-video {
     float: left;
-    height: 483px;
+    height: auto;
     width: 612px;
-
-    .embedded-video {
-      height: 483px;
-      padding: 0;
-      width: 612px;
-    }
-
-    iframe {
-      height: 100%;
-      width: 100%;
-    }
   }
 
   #guest-bio {
