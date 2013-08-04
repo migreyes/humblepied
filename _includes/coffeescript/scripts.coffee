@@ -1,10 +1,21 @@
 $ ->
+  loadInterview = (name, url) ->
+    document.title = "Advice by #{name} with Mig Reyes on Humble Pied."
+    window.history.pushState('guest', '', url)
+
   $('body.interview').bind "keydown", (event) ->
-    $previous = $('[data-previous-guest]').attr 'href'
-    $next = $('[data-next-guest]').attr 'href'
+    $previous = $('[data-previous-guest]')
+    $next = $('[data-next-guest]')
+
+    $previousUrl = $previous.attr 'href'
+    $nextUrl = $next.attr 'href'
 
     switch event.keyCode
       when 37
-        $('#guest').load($previous + ' #guest') unless $previous is undefined
+        unless $previousUrl is undefined
+          $('#guest').load($previousUrl + ' #guest')
+          loadInterview $previous.find('p').html(), $previousUrl
       when 39
-        $('#guest').load($next + ' #guest') unless $next is undefined
+        unless $nextUrl is undefined
+          $('#guest').load($nextUrl + ' #guest')
+          loadInterview $next.find('p').html(), $nextUrl
