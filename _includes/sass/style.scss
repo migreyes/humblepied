@@ -50,6 +50,8 @@ a {
 
 #site-footer {
 
+  a:hover { color: #333; }
+
   .footer-home { font-weight: bold; }
   :not(.footer-home) { text-decoration: underline; }
 }
