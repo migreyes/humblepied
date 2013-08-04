@@ -153,6 +153,7 @@
     position: relative;
 
     &:before {
+      color: $color-green;
       content: '“';
       left: -2.25rem;
       position: absolute;
