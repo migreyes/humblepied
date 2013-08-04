@@ -142,17 +142,14 @@
 }
 
 // --------------------------- *
-@include responsive-break-point(321px) {
-
-}
-
-// --------------------------- *
 @include responsive-break-point(641px) {
   #guest-header {
     margin-bottom: 1rem;
+    min-height: 2rem;
     position: relative;
+    width: 100%;
 
-    h3, h4, .guest-nav { display: block; }
+    .guest-nav { display: block; }
   }
 
   .guest-nav {
@@ -208,4 +205,13 @@
   }
 
   #guest-footer { display: none; }
+}
+
+// --------------------------- *
+@include responsive-break-point(740px) {
+
+  #guest-header {
+
+    h3, h4 { display: block; }
+  }
 }
