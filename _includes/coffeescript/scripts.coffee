@@ -28,4 +28,5 @@ $ ->
         window.history.pushState('all', '', '/')
 
     window.onpopstate = ->
+      document.title = location.title
       $('#content').load(location.href + ' #content')
