@@ -10,7 +10,7 @@
         <ul class="guest-nav">
           {% if page.previous %}
             <li>
-              <a href="{{ page.previous.url }}">
+              <a href="{{ page.previous.url }}" data-previous-guest>
                 <span class="guest-nav-pagination">Previous</span>
                 <p>{{ page.previous.title }}</p>
               </a>
@@ -19,7 +19,7 @@
 
           {% if page.next %}
             <li>
-              <a href="{{ page.next.url }}">
+              <a href="{{ page.next.url }}" data-next-guest>
                 <span class="guest-nav-pagination">Next</span>
                 <p>{{ page.next.title }}</p>
               </a>
@@ -61,7 +61,7 @@
         <ul class="guest-nav">
           {% if page.previous %}
             <li>
-              <a href="{{ page.previous.url }}">
+              <a href="{{ page.previous.url }}" data-previous-guest>
                 <span class="guest-nav-pagination">Previous</span>
                 <p>{{ page.previous.title }}</p>
               </a>
@@ -70,7 +70,7 @@
 
           {% if page.next %}
             <li>
-              <a href="{{ page.next.url }}">
+              <a href="{{ page.next.url }}" data-next-guest>
                 <span class="guest-nav-pagination">Next</span>
                 <p>{{ page.next.title }}</p>
               </a>
