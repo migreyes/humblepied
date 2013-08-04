@@ -8,17 +8,24 @@
 }
 
 .guest-preview {
-  @include transition(all 1s ease);
+  @include transition(all .2s ease);
   display: block;
   margin-bottom: 2rem;
   width: 100%;
 
   figure {
+
     width: 100%;
 
     img {
+      @include transition(all .2s ease);
       height: auto;
       width: 100%;
+    }
+
+    &:hover {
+
+      img { margin: -.3rem 0 .3rem; }
     }
   }
 }
