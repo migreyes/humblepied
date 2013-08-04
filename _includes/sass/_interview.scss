@@ -104,12 +104,36 @@
 }
 
 #guest-quote {
-  font-size: 2rem;
-  margin-bottom: 2rem;
+  font-family: $font-tisa;
+  font-size: 2.25rem;
+  letter-spacing: -.15rem;
+  line-height: 1em;
+  margin: 4rem auto;
+  padding-left: .35rem;
+  position: relative;
+
+  &:before {
+    color: $color-green;
+    content: '“';
+    left: -.75rem;
+    position: absolute;
+    top: -.5rem;
+  }
 }
 
 #guest-footer {
+  margin-bottom: 2rem;
 
+  li {
+    vertical-align: top;
+    text-align: center;
+    width: 49%;
+  }
+
+  .guest-nav-pagination {
+    display: inline-block;
+    margin-bottom: .25rem;
+  }
 }
 
 // --------------------------- *
@@ -159,18 +183,11 @@
   }
 
   #guest-quote {
-    font-family: $font-tisa;
     font-size: 4.5rem;
-    letter-spacing: -.15rem;
-    line-height: 1em;
-    margin-bottom: 4rem;
-    position: relative;
+    padding: 0;
 
     &:before {
-      color: $color-green;
-      content: '“';
       left: -2.25rem;
-      position: absolute;
       top: -.5rem;
     }
   }
