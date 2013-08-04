@@ -49,6 +49,12 @@ a {
   }
 }
 
+#site-footer {
+
+  .footer-home { font-weight: bold; }
+  :not(.footer-home) { text-decoration: underline; }
+}
+
 // --------------------------- *
 @include responsive-break-point(640px) {
   #site-header {
