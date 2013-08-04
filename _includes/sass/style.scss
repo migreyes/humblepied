@@ -10,7 +10,7 @@ body {
 }
 
 a {
-  @include transition(all .2s ease);
+  @include transition(color .2s ease);
   color: $color-green;
   text-decoration: none;
 
@@ -25,13 +25,13 @@ a {
 }
 
 #site-header {
-  margin: 2rem auto;
+  margin: 1.5rem auto 1rem;
 
   h1 {
-    font-size: 2.1rem;
+    font-size: 1.5rem;
     letter-spacing: -1px;
     line-height: .8rem;
-    margin-bottom: .75rem;
+    margin-bottom: .5rem;
 
     a { color: #555; }
     a:hover { color: $color-green; }
@@ -40,6 +40,7 @@ a {
   h2 {
     color: #666;
     font-family: $font-tisa;
+    font-size: .9rem;
     font-style: italic;
     font-weight: normal;
     line-height: 1.2em;
@@ -65,13 +66,15 @@ a {
   body { padding: 0 3rem; }
 
   #site-header {
-    margin-bottom: 3rem;
+    margin: 2rem auto;
 
     h1 {
-      margin: -.5rem 0 0 -1rem;
+      font-size: 2.1rem;
+      margin-bottom: .75rem;
 
       a {
         display: inline-block;
+        margin: -1rem;
         padding: 1rem;
       }
     }

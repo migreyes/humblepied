@@ -20,24 +20,39 @@
   }
 }
 
+.guest-preview-quote {
+  color: #666;
+  font-family: $font-tisa;
+  line-height: 1.2em;
+}
+
 // --------------------------- *
-@include responsive-break-point(640px) {
-  #guests {
-    text-align: center;
-  }
+@include responsive-break-point(321px) {
+
+  #guests { text-align: center; }
 
   .guest-preview {
     display: inline-block;
-    margin: 0 1.5rem 2rem 0;
+    margin-bottom: 2rem;
     text-align: left;
     vertical-align: top;
+    width: 45%;
+
+    &:nth-child(odd) { margin-right: 1rem; }
+  }
+}
+
+// --------------------------- *
+@include responsive-break-point(640px) {
+
+  .guest-preview {
+    margin: 0 1.5rem 2rem 0;
     width: 30%;
 
     .guest-preview-quote {
       color: #666;
       font-family: $font-tisa;
       font-size: 1.2rem;
-      line-height: 1.2em;
     }
 
     &:nth-child(3n+3) { margin-right: 0; }
