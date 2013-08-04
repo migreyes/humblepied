@@ -53,6 +53,11 @@
   }
 }
 
+#guest-presentation {
+
+  hr { display: none; }
+}
+
 #guest-video {
 
   .embedded-video {
@@ -161,19 +166,28 @@
 
   #guest-presentation {
     @include clearfix;
-    margin-bottom: 2rem;
+    position: relative;
+
+    hr {
+      border: none;
+      display: block;
+      float: right;
+      margin: 0 0 0 1rem;
+      min-height: 25rem;
+      width: 20rem;
+    }
   }
 
   #guest-video {
-    float: left;
     height: auto;
     max-width: 612px;
-    width: 100%;
+    overflow: hidden;
   }
 
   #guest-bio {
-    float: right;
-    margin-top: 1.75rem;
+    position: absolute;
+    right: 0;
+    top: 1.5rem;
     width: 20rem;
 
     .share-on-twitter {
@@ -184,6 +198,7 @@
 
   #guest-quote {
     font-size: 4.5rem;
+    margin-top: 3rem;
     padding: 0;
 
     &:before {
