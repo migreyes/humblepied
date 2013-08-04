@@ -62,7 +62,7 @@
 
   .embedded-video {
     height: 0;
-    padding-bottom: 79.15%;
+    padding-bottom: 78.92%;
     overflow: hidden;
     position: relative;
 
@@ -179,6 +179,8 @@
     height: auto;
     max-width: 612px;
     overflow: hidden;
+
+    .embedded-video { padding-bottom: 79.15%; }
   }
 
   #guest-bio {
