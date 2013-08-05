@@ -1,6 +1,7 @@
 @import "mixins";
 
 #guests {
+  @include animate(fade-in .5s both);
   margin: 0 auto;
   max-width: 960px;
   text-align: center;
@@ -14,7 +15,7 @@
   width: 100%;
 
   figure {
-
+    @include backface-visibility;
     width: 100%;
 
     img {
@@ -25,6 +26,7 @@
 }
 
 .guest-preview-quote {
+  @include backface-visibility;
   color: #666;
   font-family: $font-tisa;
   line-height: 1.2em;
