@@ -60,17 +60,26 @@ a {
     font-style: italic;
     font-weight: normal;
     line-height: 1.2em;
+    margin-top: .75rem;
     overflow: hidden;
   }
 
   ul {
     position: absolute;
-    top: .45rem;
+    top: .15rem;
     right: 0;
   }
 
   li {
     display: inline-block;
+
+    a {
+      @include border-radius(3px);
+      background-color: $color-green;
+      color: white;
+      font-size: .75rem;
+      padding: .4rem .75rem;
+    }
 
     i { display: none; }
   }
@@ -120,8 +129,8 @@ a {
 
     h2 {
       display: inline;
-      font-size: 1.2rem;
-      line-height: 1.2em;
+      font-size: 1rem;
+      line-height: 1em;
 
       a {
         margin: -.5rem;
@@ -139,7 +148,7 @@ a {
     ul {
       position: absolute;
       right: 0;
-      top: 1.1rem;
+      top: 2.5rem;
       width: 20rem;
     }
 
@@ -149,9 +158,13 @@ a {
 
       a {
         @include transition(all .2s ease);
+        @include border-radius(0);
+        background-color: transparent;
         border-bottom: 1px solid white;
         color: #666;
+        font-size: .9rem;
         font-weight: bold;
+        padding: 0;
 
         i {
           display: inline;
@@ -181,6 +194,20 @@ a {
       margin: -.5rem;
       padding: .5rem;
     }
+  }
+}
+
+// --------------------------- *
+@include responsive-break-point(740px) {
+
+  #site-header {
+
+    h2 {
+      font-size: 1.3rem;
+      line-height: 1.2em;
+    }
+
+    ul { top: 2.9rem; }
   }
 }
 
