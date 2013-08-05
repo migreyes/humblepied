@@ -1,7 +1,7 @@
 @import "mixins";
 
 #guests {
-  @include animate(fade-in .5s both);
+  @include animate(fade-in .5s .2s both);
   margin: 0 auto;
   max-width: 960px;
   text-align: center;
