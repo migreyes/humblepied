@@ -59,9 +59,6 @@ a {
     font-style: italic;
     font-weight: normal;
     line-height: 1.2em;
-
-    a { text-decoration: underline; }
-    a:hover { color: #333; }
   }
 }
 
@@ -107,12 +104,51 @@ a {
     }
 
     h2 {
+      display: inline;
       font-size: 1.3rem;
       line-height: 1.2em;
+      overflow: hidden;
 
       a {
         margin: -.5rem;
         padding: .5rem;
+      }
+    }
+
+    nav {
+      @include clearfix;
+      display: block;
+      width: 100%;
+    }
+
+    ul {
+      float: right;
+      margin-left: 1rem;
+      padding-top: .45rem;
+      width: 20rem;
+    }
+
+    li {
+      display: inline-block;
+      font-size: .95rem;
+
+      a {
+        @include transition(all .2s ease);
+        border-bottom: 1px solid white;
+        color: #666;
+        font-weight: bold;
+
+        &:visited { color: #666; }
+        &:hover {
+          border-bottom-color: rgba(93, 194, 14, .5);
+          color: $color-green;
+        }
+        &:active { color: #666; }
+      }
+
+      &:last-child:before {
+        color: #666;
+        content: '/ ';
       }
     }
   }
