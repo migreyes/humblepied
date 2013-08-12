@@ -212,6 +212,14 @@ a {
   }
 }
 
+// Disable iOS font sizing
+@media screen and (max-device-width: 480px) {
+  html {
+    -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+  }
+}
+
 @import "all";
 @import "interview";
 @import "about";
