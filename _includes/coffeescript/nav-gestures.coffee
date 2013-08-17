@@ -1,11 +1,8 @@
 $ ->
   $swipeable = $('#content').hammer()
 
-  $previous = $('[data-previous-guest]')
-  $next = $('[data-next-guest]')
-
-  $previousUrl = $previous.attr 'href'
-  $nextUrl = $next.attr 'href'
+  $previousUrl = $('[data-previous-guest]').attr 'href'
+  $nextUrl = $('[data-next-guest]').attr 'href'
 
   $swipeable.on "swipeleft", (e) ->
     unless $previousUrl is undefined
