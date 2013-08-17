@@ -11,7 +11,7 @@
           <ul class="guest-nav">
             {% if page.previous %}
               <li>
-                <a href="{{ page.previous.url }}" data-previous-guest>
+                <a href="{{ page.previous.url }}" title="Hear advice from {{ page.previous.title }}. Keyboard shortcut: &larr;" data-previous-guest>
                   <span class="guest-nav-pagination">Previous</span>
                   <p>{{ page.previous.title }}</p>
                 </a>
@@ -20,7 +20,7 @@
 
             {% if page.next %}
               <li>
-                <a href="{{ page.next.url }}" data-next-guest>
+                <a href="{{ page.next.url }}" title="Hear advice from {{ page.next.title }}. Keyboard shortcut: &rarr;" data-next-guest>
                   <span class="guest-nav-pagination">Next</span>
                   <p>{{ page.next.title }}</p>
                 </a>
