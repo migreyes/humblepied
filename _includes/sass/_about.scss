@@ -1,13 +1,48 @@
 @import "mixins";
 
+body.about #content { @include animate(fade-in .5s .2s both); }
+
+body.about section {
+
+  h2 { font-family: $font-tisa; }
+}
+
+#about-nav {
+
+  ul { list-style: none; }
+}
+
 #about {
-  margin: 0 auto;
-  max-width: 960px;
   width: 100%;
 }
 
 // --------------------------- *
 @include responsive-break-point(640px) {
+
+  body.about section {
+
+    h2 {
+      font-size: 1.5rem;
+      letter-spacing: -.05rem;
+      margin-bottom: .5rem;
+    }
+
+    p {
+      line-height: 1.5em;
+    }
+  }
+
+  #about-nav {
+    float: right;
+    height: 10rem;
+    margin-left: 2rem;
+    position: relative;
+    width: 20rem;
+
+    ul { position: absolute; }
+    li { margin-bottom: .5rem; }
+  }
+
   #about {
     margin-bottom: 2rem;
   }
