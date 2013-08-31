@@ -5,6 +5,8 @@ body.about #content { @include animate(fade-in .5s .2s both); }
 body.about section {
 
   h2 { font-family: $font-tisa; }
+
+  p { margin-bottom: 1rem; }
 }
 
 #about-nav {
@@ -17,7 +19,7 @@ body.about section {
 }
 
 // --------------------------- *
-@include responsive-break-point(640px) {
+@include responsive-break-point(641px) {
 
   body.about section {
 
@@ -33,14 +35,24 @@ body.about section {
   }
 
   #about-nav {
-    float: right;
-    height: 10rem;
-    margin-left: 2rem;
+    padding: 0 0 1rem;
+    margin-bottom: 1rem;
     position: relative;
-    width: 20rem;
+    text-align: center;
+    width: 100%;
 
-    ul { position: absolute; }
-    li { margin-bottom: .5rem; }
+    ul {
+      background: white;
+      padding: 1rem;
+      left: 0;
+      top: 0;
+      width: 100%;
+    }
+
+    li {
+      display: inline-block;
+      margin: 0 1rem;
+    }
   }
 
   #about {

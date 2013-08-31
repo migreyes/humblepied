@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
-gem 'jekyll', '~> 0.12.0'
+gem 'jekyll'
 gem 'rake'
 gem 'rdiscount'
-gem 'sass', '~> 3.3.0.alpha.69'
 gem 'coffee-script'
+gem 'sass', '~> 3.3.0.alpha.231'

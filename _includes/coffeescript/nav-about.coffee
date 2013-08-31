@@ -1,17 +1,27 @@
-# Making the About section navigation sticky.
 $ ->
   $nav = $('#about-nav')
 
-  # Set the height of the invisible right column.
-  $nav.css
-    'height': $('#content').height()
+  # Making the About section navigation sticky.
+  stickyMenu = ->
+    if $(window).scrollTop() > ($nav.offset().top)
+      $nav.find('ul').css
+        'position': 'fixed'
+    else
+      $nav.find('ul').css
+        'position': 'relative'
+
+  stickyMenu()
+
+
+#   # Bold the navigation if we’re on that section.
+#   $rangeHow = $('#about').offset().top + $('#about').height()
+#   $rangeLessons = $('#about-lessons').offset().top + $('#about-lessons').height()
+#   $rangeBehind = $('#about-behind').offset().top + $('#about-behind').height()
+#   $rangeTech = $('#about-tech').offset().top + $('#about-tech').height()
+
+#   currentlyReading = ->
+
 
   $(window).on "scroll", ->
-    if $(window).scrollTop() > ($nav.offset().top - 40)
-      $('#about-nav ul').css
-        'position': 'fixed',
-        'top': '40px'
-    else
-      $('#about-nav ul').css
-        'position': 'absolute',
-        'top': '0'
+    stickyMenu()
+#     currentlyReading()
