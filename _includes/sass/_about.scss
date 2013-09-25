@@ -9,11 +9,6 @@ body.about section {
   p { margin-bottom: 1rem; }
 }
 
-#about-nav {
-
-  ul { list-style: none; }
-}
-
 #about {
   width: 100%;
 }
@@ -31,27 +26,6 @@ body.about section {
 
     p {
       line-height: 1.5em;
-    }
-  }
-
-  #about-nav {
-    padding: 0 0 1rem;
-    margin-bottom: 1rem;
-    position: relative;
-    text-align: center;
-    width: 100%;
-
-    ul {
-      background: white;
-      padding: 1rem;
-      left: 0;
-      top: 0;
-      width: 100%;
-    }
-
-    li {
-      display: inline-block;
-      margin: 0 1rem;
     }
   }
 
