@@ -25,7 +25,7 @@
   }
 }
 
-#layout-toggle { display: none; }
+#layout-options { display: none; }
 
 .guest-preview-quote {
   @include backface-visibility;
@@ -50,12 +50,16 @@
 // --------------------------- *
 @include responsive-break-point(641px) {
 
-  #layout-toggle {
-    cursor: pointer;
+  #layout-options {
     display: block;
-    left: -4em;
-    position: absolute;
-    top: -4em;
+    margin: 0 auto;
+    padding: 2em 0;
+    text-align: center;
+
+    a {
+      cursor: pointer;
+      text-decoration: underline;
+    }
   }
 
   .guest-preview {

@@ -2,8 +2,6 @@
 class: home
 layout: default
 ---
-<a id="layout-toggle">X</a>
-
 <section id="guests">
   {% for interview in site.posts %}
     <a href="{{ interview.url }}" class="guest-preview">
@@ -15,3 +13,7 @@ layout: default
     </a>
   {% endfor %}
 </section>
+
+<aside id="layout-options">
+  Change the <a class="layout-toggle">layout</a>?
+</aside>
