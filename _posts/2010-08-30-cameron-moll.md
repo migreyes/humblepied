@@ -6,6 +6,7 @@ twitter: cameronmoll
 layout: interview
 time: "2:48"
 vimeo: 14508338
+aspect-fix: vertical
 quote: Become a problem finder and a problem explorer.
 ---
 

@@ -6,6 +6,7 @@ twitter: SeanAAdams
 layout: interview
 time: "3:13"
 vimeo: 12540037
+aspect-fix: vertical
 quote: Suspend judgement, be open, and don’t underestimate the power of a touch of flattery.
 ---
 

@@ -63,18 +63,23 @@
   margin-bottom: 1rem;
 
   .embedded-video {
+    background-color: white;
     height: 0;
-    padding-bottom: 78.92%;
+    padding-bottom: 80%;
     overflow: hidden;
     position: relative;
 
     iframe {
+      background-color: white;
       height: 100%;
       left: 0;
       position: absolute;
       top: 0;
       width: 100%;
     }
+
+   &.with-vertical-aspect-fix { padding-bottom: 80.5%; }
+   &.with-horizontal-aspect-fix { padding-bottom: 79.15%; }
   }
 }
 
@@ -184,8 +189,6 @@
     margin-bottom: 0;
     max-width: 612px;
     overflow: hidden;
-
-    .embedded-video { padding-bottom: 79.15%; }
   }
 
   #guest-bio {

@@ -6,6 +6,7 @@ twitter: randyjhunt
 layout: interview
 time: "2:36"
 vimeo: 34237610
+aspect-fix: horizontal
 quote: Everything we make of value is about people.
 ---
 

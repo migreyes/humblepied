@@ -6,6 +6,7 @@ twitter: feltron
 layout: interview
 time: "2:42"
 vimeo: 11584107
+aspect-fix: vertical
 quote: Be open to any career opportunities that come along the way.
 ---
 

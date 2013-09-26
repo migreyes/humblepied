@@ -6,6 +6,7 @@ twitter: superamit
 layout: interview
 time: "2:32"
 vimeo: 15582372
+aspect-fix: vertical
 quote: Figure out how you’ll get the word out before you even start.
 ---
 

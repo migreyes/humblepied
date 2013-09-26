@@ -6,6 +6,7 @@ twitter: johnmaeda
 layout: interview
 time: "3:20"
 vimeo: 36744704
+aspect-fix: horizontal
 quote: Look for opportunities to do things with others.
 ---
 

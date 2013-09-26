@@ -6,6 +6,7 @@ twitter: jasonfried
 layout: interview
 time: "2:05"
 vimeo: 23119508
+aspect-fix: horizontal
 quote: Make something for yourself.
 ---
 

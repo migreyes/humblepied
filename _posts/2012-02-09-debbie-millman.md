@@ -6,6 +6,7 @@ twitter: debbiemillman
 layout: interview
 time: "3:57"
 vimeo: 36506577
+aspect-fix: horizontal
 quote: Don’t compromise, and don’t take no for an answer.
 ---
 

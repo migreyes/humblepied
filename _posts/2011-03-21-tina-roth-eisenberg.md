@@ -6,6 +6,7 @@ twitter: swissmiss
 layout: interview
 time: "2:26"
 vimeo: 21238901
+aspect-fix: horizontal
 quote: If an opportunity comes your way that scares you, take it.
 ---
 
