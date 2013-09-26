@@ -44,6 +44,13 @@
               {{ content }}
             </div>
 
+            {% if page.sponsor %}
+              <h6>With love from {{ page.sponsor }}</h6>
+              <div class="biography">
+                {{ page.sponsor-bio }}
+              </div>
+            {% endif %}
+
             <h6>Discover more</h6>
             <ul>
               <li class="guest-twitter"><a href="http://twitter.com/{{ page.twitter }}" target="_blank">@{{ page.twitter }}</a></li>
