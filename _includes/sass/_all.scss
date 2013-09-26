@@ -25,6 +25,8 @@
   }
 }
 
+#layout-toggle { display: none; }
+
 .guest-preview-quote {
   @include backface-visibility;
   color: #666;
@@ -48,6 +50,14 @@
 // --------------------------- *
 @include responsive-break-point(641px) {
 
+  #layout-toggle {
+    cursor: pointer;
+    display: block;
+    left: -4em;
+    position: absolute;
+    top: -4em;
+  }
+
   .guest-preview {
     margin: 0 2rem 3rem 0;
     width: 30%;
@@ -55,6 +65,43 @@
     .guest-preview-quote { font-size: 1.2rem; }
 
     &:nth-child(3n+3) { margin-right: 0; }
+  }
+
+  .guest-preview.with-quote-only {
+    @include animate(fade-in .5s .2s both);
+    padding-left: 1em;
+    padding-right: 1em;
+    text-align: center;
+    width: 75%;
+
+    img { display: none; }
+
+    figcaption {
+      font-size: 1em;
+      margin-top: 2em;
+      text-decoration: underline;
+    }
+
+    .guest-preview-quote {
+      @include transition(color .5s ease);
+      font-size: 3rem;
+      letter-spacing: -1px;
+      line-height: 1em;
+      margin-bottom: 1em;
+
+      &:hover { color: #111; }
+
+      &:before {
+        color: $color-green;
+        content: "“";
+        padding-right: .1em;
+      }
+
+      &:after {
+        color: $color-green;
+        content: "”";
+      }
+    }
   }
 }
 
