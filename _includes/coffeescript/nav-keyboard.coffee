@@ -35,6 +35,9 @@ $ ->
       when 72
         loadPage "Inspirational advice on Humble Pied.", '/index.html'
         window.history.pushState('all', '', '/')
+      # Shortcut key: L
+      when 76
+        $('.guest-preview').toggleClass 'with-quote-only'
 
     # Back-button behavior is strange.
     # I’m not sure how to store titles in pushState,
