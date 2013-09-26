@@ -29,6 +29,7 @@ $ ->
           loadInterview $next.find('p').html(), $nextUrl
       # Shortcut key: H
       when 65
+        $('body').addClass 'about'
         loadPage "About Humble Pied.", '/about/index.html'
         window.history.pushState('about', '', '/about')
       # Shortcut key: A
