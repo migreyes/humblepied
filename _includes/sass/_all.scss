@@ -49,15 +49,22 @@
 @include responsive-break-point(641px) {
 
   .guest-preview {
-    margin: 0 1.5rem 2rem 0;
+    margin: 0 2rem 3rem 0;
     width: 30%;
 
-    .guest-preview-quote {
-      color: #666;
-      font-family: $font-tisa;
-      font-size: 1.2rem;
-    }
+    .guest-preview-quote { font-size: 1.2rem; }
 
     &:nth-child(3n+3) { margin-right: 0; }
   }
 }
+
+// // --------------------------- *
+// @include responsive-break-point(1140px) {
+//   body.home #content { max-width: 1400px; }
+
+//   .guest-preview {
+//     width: 20%;
+
+//     &:nth-child(4n+4) { margin-right: 0; }
+//   }
+// }
