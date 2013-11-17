@@ -2,13 +2,17 @@ $ ->
   # Load a specific interview into the container.
   loadInterview = (name, url) ->
     document.title = "Advice by #{name} with Mig Reyes on Humble Pied."
-    $('#content').load(url + ' #content')
+    $('#content').load (url + ' #content'), ->
+      adjustInterviewHeight()
+
     window.history.pushState('guest', '', url)
+
 
   # Load a generic page into the container.
   loadPage = (title, url) ->
     document.title = title
     $('#content').load(url + ' #content')
+
 
   # Keyboard shortcuts and navigation.
   $(window).bind "keydown", (event) ->
