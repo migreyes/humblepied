@@ -103,6 +103,13 @@
 
   li { list-style: none; }
 
+  figure { width: 50%; }
+
+  img {
+    height: auto;
+    width: 100%;
+  }
+
   .guest-website:before { content: 'Website, '}
   .guest-twitter:before { content: 'Twitter, '}
 
@@ -179,7 +186,7 @@
       display: block;
       float: right;
       margin: 0 0 0 1rem;
-      min-height: 25rem;
+      min-height: 1rem;
       width: 20rem;
     }
   }
@@ -196,6 +203,16 @@
     right: 0;
     top: 1.5rem;
     width: 20rem;
+
+    figure {
+      margin-bottom: .5em;
+      margin-top: 1.5em;
+      max-width: 150px;
+    }
+
+    p + p {
+      margin-top: .75em;
+    }
 
     .share-on-twitter {
       display: block;

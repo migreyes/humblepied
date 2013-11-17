@@ -44,18 +44,28 @@
               {{ content }}
             </div>
 
-            {% if page.sponsor %}
-              <h6>With love from {{ page.sponsor }}</h6>
-              <div class="biography">
-                {{ page.sponsor-bio }}
-              </div>
-            {% endif %}
-
             <h6>Discover more</h6>
             <ul>
               <li class="guest-twitter"><a href="http://twitter.com/{{ page.twitter }}" target="_blank">@{{ page.twitter }}</a></li>
               <li class="guest-website"><a href="http://{{ page.site }}" target="_blank">{{ page.site }}</a></li>
             </ul>
+
+            {% if page.sponsor %}
+              {% for sponsor in site.data.sponsors %}
+                {% if page.sponsor == sponsor.name %}
+                  <h6>With love from {{ sponsor.name }}</h6>
+                  <div class="biography">
+                    <figure>
+                      <img src="/assets/images/sponsors/{{ sponsor.name }}.png">
+                    </figure>
+
+                    <p>{{ sponsor.bio }}</p>
+                    <p>{{ sponsor.name }} adds, “{{ sponsor.note }}”</p>
+                    <p><a href="http://{{ sponsor.url }}" target="_blank">Visit</a> and <a href="http://twitter.com/{{ sponsor.twitter }}" target="_blank">follow</a> {{ sponsor.name }}.</p>
+                  </div>
+                {% endif %}
+              {% endfor %}
+            {% endif %}
 
             <p class="video-length">This interview lasts <strong>{{ page.time }}</strong></p>
             <p class="share-on-twitter"><a href="http://twitter.com/share?text=Inspirational%20shared%20by%20@{{ page.twitter }}%20with%20@migreyes." class="twitter-share-button" data-text="Inspirational advice shared by @{{ page.twitter }} with @migreyes on Humble Pied," data-count="horizontal" data-counturl="http://humblepied.com{{ page.id }}" data-related="migreyes:{{ page.twitter }}">Tweet this advice</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script></p>
