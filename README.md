@@ -1,9 +1,9 @@
 # Humble Pied
 
 ### What’s this all about?
-One inspiring creative sharing one piece of advice, all over video chat.
+Inspiring makers sharing one piece of advice, all over video chat.
 
-Humble Pied originally started as a friend-sourced presentation for an AIGA student conference, with peers offering their words of wisdom within the creative industry. This project was made to house all of the great bits of advice, and to stimulate dialogues along the way.
+Humble Pied originally started as a friend-sourced presentation for a student design conference, with peers offering their words of wisdom within the creative industry. This project was made to house all of the great bits of advice, and to start great conversation along the way.
 
 ### What’s in this repo?
 These are the files to generate the static HTML, CSS, and JavaScript for Humble Pied using [Jekyll](http://jekyllrb.com). Feel free to poke around for your own learning.
