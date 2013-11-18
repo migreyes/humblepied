@@ -17,6 +17,8 @@ body.about section {
 @include responsive-break-point(641px) {
 
   body.about section {
+    margin-bottom: 2em;
+    max-width: 612px;
 
     h2 {
       font-size: 1.5rem;
@@ -25,11 +27,8 @@ body.about section {
     }
 
     p {
+      font-size: 1.2em;
       line-height: 1.5em;
     }
-  }
-
-  #about {
-    margin-bottom: 2rem;
   }
 }
