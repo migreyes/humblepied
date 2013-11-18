@@ -17,13 +17,13 @@ body.about section {
 @include responsive-break-point(641px) {
 
   body.about section {
-    margin-bottom: 2em;
+    margin-bottom: 4em;
     max-width: 612px;
 
     h2 {
       font-size: 1.5rem;
       letter-spacing: -.05rem;
-      margin-bottom: .5rem;
+      margin-bottom: .75rem;
     }
 
     p {
