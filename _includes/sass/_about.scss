@@ -3,10 +3,18 @@
 body.about #content { @include animate(fade-in .5s .2s both); }
 
 body.about section {
+  margin-bottom: 2em;
 
-  h2 { font-family: $font-tisa; }
+  h2 {
+    font-family: $font-tisa;
+    margin-bottom: .5em;
+    margin-top: 1em;
+  }
 
-  p { margin-bottom: 1rem; }
+  p {
+    line-height: 1.25em;
+    margin-bottom: 1rem;
+  }
 
   a { text-decoration: underline; }
 }
