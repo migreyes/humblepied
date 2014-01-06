@@ -15,7 +15,7 @@ body.about section {
 @include responsive-break-point(641px) {
 
   body.about section {
-    margin-bottom: 4em;
+    margin-bottom: 3em;
     max-width: 600px;
 
     h2 {
