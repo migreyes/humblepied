@@ -1,4 +1,4 @@
-@import "mixins";
+@import 'globals/mixins';
 
 body.about #content { @include animate(fade-in .5s .2s both); }
 

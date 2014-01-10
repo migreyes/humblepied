@@ -1,6 +1,14 @@
-@import "reset";
-@import "mixins";
-@import "animations";
+// Reset & Mixins ———————————————————————————— •
+// ——————————————————————————————————————————— •
+
+@import
+  'globals/mixins',
+  'globals/reset',
+  'globals/animations';
+
+
+// Base Styles ——————————————————————————————— •
+// ——————————————————————————————————————————— •
 
 body {
   @include border-box;
@@ -18,207 +26,32 @@ a {
   &:hover { text-decoration: none; }
 }
 
-#site-header,
-#site-footer {
-  line-height: 1.25em;
-  max-width: 960px;
-  width: 100%;
-}
-
-#site-header {
-  margin: 1.5rem auto 1rem;
-  position: relative;
-
-  h1 {
-    @include transition(all .2s ease);
-    font-size: 1.5rem;
-    letter-spacing: -1px;
-    line-height: .8rem;
-    margin-bottom: .5rem;
-
-    a {
-      @include transition(all .2s ease);
-      background: url('/assets/images/icons/video.png') 8.2rem .4rem no-repeat;
-      background-size: 26px 16px;
-      display: block;
-      color: #555;
-      padding: .5rem 0 .1rem;
-
-
-      &:hover {
-        background-position: 8.5rem .4rem;
-        color: $color-green;
-      }
-    }
-  }
-
-  h2 {
-    @include transition(all .2s ease);
-    color: #666;
-    font-family: $font-tisa;
-    font-size: .9rem;
-    font-style: italic;
-    font-weight: normal;
-    line-height: 1.2em;
-    margin-top: .75rem;
-    overflow: hidden;
-  }
-
-  ul {
-    position: absolute;
-    top: .15rem;
-    right: 0;
-  }
-
-  li {
-    display: inline-block;
-
-    a {
-      @include border-radius(3px);
-      background-color: $color-green;
-      color: white;
-      font-size: .75rem;
-      padding: .4rem .75rem;
-    }
-
-    i { display: none; }
-  }
-}
-
-#content {
+.content {
   position: relative;
   margin: 0 auto;
   max-width: 960px;
 }
 
-#site-footer {
-  font-size: .8rem;
-  margin-bottom: 2rem;
-  text-align: center;
 
-  a:hover { color: #333; }
+// Base Styles: Mobile Portrait —————————————— •
+// ——————————————————————————————————————————— •
 
-  .footer-home { font-weight: bold; }
-  :not(.footer-home) { text-decoration: underline; }
-}
-
-// --------------------------- *
 @include responsive-break-point(321px) {
-
   body { padding: 0 2rem; }
 }
 
-// --------------------------- *
+
+// Base Styles: Mobile Landscape ————————————— •
+// ——————————————————————————————————————————— •
+
 @include responsive-break-point(641px) {
   body { padding: 0 3rem; }
-
-  #site-header {
-    @include clearfix;
-    margin: 3rem auto 2rem;
-
-    h1 {
-      font-size: 2.1rem;
-      margin-bottom: .75rem;
-      width: 15rem;
-
-      a {
-        background-size: 40px 25px;
-        background-position: 13rem .6rem;
-        display: block;
-        margin: -1rem;
-        padding: 1rem;
-
-        &:hover {
-          background-position: 13.25rem .6rem;
-        }
-      }
-    }
-
-    h2 {
-      display: inline;
-      font-size: 1rem;
-      line-height: 1em;
-
-      a {
-        margin: -.5rem;
-        padding: .5rem;
-      }
-    }
-
-    nav {
-      float: right;
-      height: 1.75rem;
-      margin-left: 1rem;
-      width: 20rem;
-    }
-
-    ul {
-      position: absolute;
-      right: 0;
-      top: 2.5rem;
-      width: 20rem;
-    }
-
-    li {
-      display: inline-block;
-      font-size: .95rem;
-
-      a {
-        @include transition(all .2s ease);
-        @include border-radius(0);
-        background-color: transparent;
-        border-bottom: 1px solid white;
-        color: #666;
-        font-size: .9rem;
-        font-weight: bold;
-        padding: 0;
-
-        i {
-          display: inline;
-          font-style: normal;
-        }
-
-        &:visited { color: #666; }
-        &:hover {
-          border-bottom-color: rgba(93, 194, 14, .5);
-          color: $color-green;
-        }
-        &:active { color: #666; }
-      }
-
-      &:last-child:before {
-        color: #666;
-        content: '/ ';
-      }
-    }
-  }
-
-  #site-footer {
-    font-size: 1rem;
-    margin: 2rem auto;
-
-    a {
-      margin: -.5rem;
-      padding: .5rem;
-    }
-  }
 }
 
-// --------------------------- *
-@include responsive-break-point(740px) {
 
-  #site-header {
+// Fix: iOS Font Sizing —————————————————————— •
+// ——————————————————————————————————————————— •
 
-    h2 {
-      font-size: 1.3rem;
-      line-height: 1.2em;
-    }
-
-    ul { top: 2.9rem; }
-  }
-}
-
-// Disable iOS font sizing
 @media screen and (max-device-width: 480px) {
   html {
     -webkit-text-size-adjust: 100%;
@@ -226,6 +59,19 @@ a {
   }
 }
 
-@import "all";
-@import "interview";
-@import "about";
+
+// Components ———————————————————————————————— •
+// ——————————————————————————————————————————— •
+
+@import
+  'components/navigation',
+  'components/footer';
+
+
+// Pages ————————————————————————————————————— •
+// ——————————————————————————————————————————— •
+
+@import
+  'pages/index',
+  'pages/interview',
+  'pages/about';
