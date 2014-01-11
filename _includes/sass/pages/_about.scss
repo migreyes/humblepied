@@ -1,9 +1,13 @@
 @import 'globals/mixins';
 
-body.about #content { @include animate(fade-in .5s .2s both); }
+// About ————————————————————————————————————— •
+// ——————————————————————————————————————————— •
 
-body.about section {
-  margin-bottom: 2em;
+.about { @include animate(fade-in .5s .2s both); }
+
+.about {
+
+  section { margin-bottom: 2em; }
 
   h2 {
     font-family: $font-tisa;
@@ -14,17 +18,22 @@ body.about section {
   p {
     line-height: 1.25em;
     margin-bottom: 1rem;
-  }
 
-  a { text-decoration: underline; }
+    a { text-decoration: underline; }
+  }
 }
 
-// --------------------------- *
-@include responsive-break-point(641px) {
 
-  body.about section {
-    margin-bottom: 3em;
-    max-width: 600px;
+// About: Tablet ————————————————————————————— •
+// ——————————————————————————————————————————— •
+
+@include responsive-break-point(641px) {
+  .about {
+
+    section {
+      margin-bottom: 3em;
+      max-width: 600px;
+    }
 
     h2 {
       font-size: 1.25rem;
@@ -33,8 +42,6 @@ body.about section {
       margin-bottom: .75rem;
     }
 
-    p {
-      line-height: 1.5em;
-    }
+    p { line-height: 1.5em; }
   }
 }
