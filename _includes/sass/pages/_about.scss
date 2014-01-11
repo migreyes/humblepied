@@ -1,5 +1,3 @@
-@import 'globals/mixins';
-
 // About ————————————————————————————————————— •
 // ——————————————————————————————————————————— •
 
@@ -9,7 +7,7 @@
 
   section { margin-bottom: 2em; }
 
-  h2 {
+  section h2 {
     font-family: $font-tisa;
     margin-bottom: .5em;
     margin-top: 1em;
@@ -35,7 +33,7 @@
       max-width: 600px;
     }
 
-    h2 {
+    section h2 {
       font-size: 1.25rem;
       font-family: $font-dagny;
       letter-spacing: -.05rem;
