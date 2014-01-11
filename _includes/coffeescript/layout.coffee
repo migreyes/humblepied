@@ -1,13 +1,15 @@
+# Fix for right-floated fixed-width rail
 adjustInterviewHeight = ->
-  $interviewHeight = $('#guest-presentation hr')
-  $adjustment = $('#guest-bio').height() + 50 + 'px'
-  $interviewHeight.css height: $adjustment
+  $sideRail = $('[data-resizer]')
+  $adjustment = $('.guest-info').height() + 50 + 'px'
+  $sideRail.css height: $adjustment
 
 $ ->
-  $advice = $('.guest-preview')
 
+  # Switch layouts on Home
+  $guests = $('.guest-preview')
   $('.guest-layout-toggle').on "click", ->
-    $advice.toggleClass 'guest-preview-quote-only'
+    $guests.toggleClass 'guest-preview-quote-only'
     window.scrollTo 0
 
   adjustInterviewHeight()
