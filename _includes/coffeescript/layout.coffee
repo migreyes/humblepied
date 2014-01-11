@@ -6,8 +6,8 @@ adjustInterviewHeight = ->
 $ ->
   $advice = $('.guest-preview')
 
-  $('.layout-toggle').on "click", ->
-    $advice.toggleClass 'with-quote-only'
+  $('.guest-layout-toggle').on "click", ->
+    $advice.toggleClass 'guest-preview-quote-only'
     window.scrollTo 0
 
   adjustInterviewHeight()

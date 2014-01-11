@@ -1,16 +1,17 @@
 {% include head.html %}
   <body class="interview">
-    {% include header.html %}
+    {% include navigation.html %}
 
-    <div id="content">
-      <section id="guest">
-        <header id="guest-header">
+    <div class="content">
+      <section class="guest">
+
+        <header class="guest-header">
           <h3>{{ page.title }}</h3>
           <h4>{{ page.label }}</h4>
 
           <ul class="guest-nav">
             {% if page.previous %}
-              <li>
+              <li class="guest-nav-link">
                 <a href="{{ page.previous.url }}" title="Hear advice from {{ page.previous.title }}. Keyboard shortcut: &larr;" data-previous-guest>
                   <span class="guest-nav-pagination">Previous</span>
                   <p>{{ page.previous.title }}</p>
@@ -19,7 +20,7 @@
             {% endif %}
 
             {% if page.next %}
-              <li>
+              <li class="guest-nav-link">
                 <a href="{{ page.next.url }}" title="Hear advice from {{ page.next.title }}. Keyboard shortcut: &rarr;" data-next-guest>
                   <span class="guest-nav-pagination">Next</span>
                   <p>{{ page.next.title }}</p>
@@ -29,32 +30,32 @@
           </ul>
         </header>
 
-        <article id="guest-presentation">
+        <article class="guest-presentation">
           <hr>
 
-          <div id="guest-video">
-            <figure class="embedded-video{% if page.aspect-fix %} with-{{ page.aspect-fix }}-aspect-fix{% endif %}">
+          <div class="guest-video">
+            <figure class="guest-video-embed{% if page.aspect-fix %} guest-video-aspect-{{ page.aspect-fix }}{% endif %}">
               <iframe src="http://player.vimeo.com/video/{{ page.vimeo }}?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;color=5ac10e&amp;autoplay=0&amp;width=612" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
             </figure>
           </div>
 
-          <aside id="guest-bio">
+          <aside class="guest-info">
             <h5>{{ page.title }}</h5>
-            <div class="biography">
+            <div class="guest-info-bio">
               {{ content }}
             </div>
 
             <h6>Discover more</h6>
             <ul>
-              <li class="guest-twitter"><a href="http://twitter.com/{{ page.twitter }}" target="_blank">@{{ page.twitter }}</a></li>
-              <li class="guest-website"><a href="http://{{ page.site }}" target="_blank">{{ page.site }}</a></li>
+              <li class="guest-info-twitter"><a href="http://twitter.com/{{ page.twitter }}" target="_blank">@{{ page.twitter }}</a></li>
+              <li class="guest-info-website"><a href="http://{{ page.site }}" target="_blank">{{ page.site }}</a></li>
             </ul>
 
             {% if page.sponsor %}
               {% for sponsor in site.data.sponsors %}
                 {% if page.sponsor == sponsor.name %}
                   <h6>With love from {{ sponsor.name }}</h6>
-                  <div class="biography">
+                  <div class="guest-info-bio">
                     <figure>
                       <img src="/assets/images/sponsors/{{ sponsor.name }}.png">
                     </figure>
@@ -67,17 +68,17 @@
               {% endfor %}
             {% endif %}
 
-            <p class="video-length">This interview lasts <strong>{{ page.time }}</strong></p>
-            <p class="share-on-twitter"><a href="http://twitter.com/share?text=Inspirational%20shared%20by%20@{{ page.twitter }}%20with%20@migreyes." class="twitter-share-button" data-text="Inspirational advice shared by @{{ page.twitter }} with @migreyes on Humble Pied," data-count="horizontal" data-counturl="http://humblepied.com{{ page.id }}" data-related="migreyes:{{ page.twitter }}">Tweet this advice</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script></p>
+            <p class="guest-info-length">This interview lasts <strong>{{ page.time }}</strong></p>
+            <p class="guest-info-tweet"><a href="http://twitter.com/share?text=Inspirational%20shared%20by%20@{{ page.twitter }}%20with%20@migreyes." class="twitter-share-button" data-text="Inspirational advice shared by @{{ page.twitter }} with @migreyes on Humble Pied," data-count="horizontal" data-counturl="http://humblepied.com{{ page.id }}" data-related="migreyes:{{ page.twitter }}">Tweet this advice</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script></p>
           </aside>
         </article>
 
-        <blockquote id="guest-quote">{{ page.quote }}</blockquote>
+        <blockquote class="guest-quote">{{ page.quote }}</blockquote>
 
-        <footer id="guest-footer">
+        <footer class="guest-footer">
           <ul class="guest-nav">
             {% if page.previous %}
-              <li>
+              <li class="guest-nav-link">
                 <a href="{{ page.previous.url }}">
                   <span class="guest-nav-pagination">Previous</span>
                   <p>{{ page.previous.title }}</p>
@@ -86,7 +87,7 @@
             {% endif %}
 
             {% if page.next %}
-              <li>
+              <li class="guest-nav-link">
                 <a href="{{ page.next.url }}">
                   <span class="guest-nav-pagination">Next</span>
                   <p>{{ page.next.title }}</p>
@@ -95,6 +96,7 @@
             {% endif %}
           </ul>
         </footer>
+
       </section>
     </div>
 

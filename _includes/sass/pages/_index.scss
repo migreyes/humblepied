@@ -1,10 +1,13 @@
 @import 'globals/mixins';
 
-#guests {
+// Home —————————————————————————————————————— •
+// ——————————————————————————————————————————— •
+
+.guests {
   @include animate(fade-in .5s .2s both);
   margin: 0 auto;
-  max-width: 960px;
   text-align: center;
+  max-width: 960px;
   width: 100%;
 }
 
@@ -13,19 +16,17 @@
   display: block;
   margin-bottom: 2rem;
   width: 100%;
-
-  figure {
-    @include backface-visibility;
-    width: 100%;
-
-    img {
-      height: auto;
-      width: 100%;
-    }
-  }
 }
 
-#layout-options { display: none; }
+.guest-preview-photo {
+  @include backface-visibility;
+  width: 100%;
+
+  img {
+    height: auto;
+    width: 100%;
+  }
+}
 
 .guest-preview-quote {
   @include backface-visibility;
@@ -34,7 +35,12 @@
   line-height: 1.2em;
 }
 
-// --------------------------- *
+.guest-layout-options { display: none; }
+
+
+// Home: Mobile Portrait ————————————————————— •
+// ——————————————————————————————————————————— •
+
 @include responsive-break-point(321px) {
 
   .guest-preview {
@@ -47,31 +53,22 @@
   }
 }
 
-// --------------------------- *
+
+// Home: Mobile Portrait ————————————————————— •
+// ——————————————————————————————————————————— •
+
 @include responsive-break-point(641px) {
-
-  #layout-options {
-    display: block;
-    margin: 0 auto;
-    padding: 2em 0;
-    text-align: center;
-
-    a {
-      cursor: pointer;
-      text-decoration: underline;
-    }
-  }
 
   .guest-preview {
     margin: 0 2rem 3rem 0;
     width: 30%;
 
-    .guest-preview-quote { font-size: 1.2rem; }
-
     &:nth-child(3n+3) { margin-right: 0; }
   }
 
-  .guest-preview.with-quote-only {
+  .guest-preview-quote { font-size: 1.2rem; }
+
+  .guest-preview-quote-only {
     @include animate(fade-in .5s .2s both);
     padding-left: 1em;
     padding-right: 1em;
@@ -105,6 +102,19 @@
         color: $color-green;
         content: "”";
       }
+    }
+  }
+
+  .guest-layout-options {
+    display: block;
+    margin: 0 auto;
+    padding: 2em 0;
+    text-align: center;
+    width: 100%;
+
+    a {
+      cursor: pointer;
+      text-decoration: underline;
     }
   }
 }

@@ -2,18 +2,19 @@
 class: home
 layout: default
 ---
-<section id="guests">
+<section class="guests">
   {% for interview in site.posts %}
     <a href="{{ interview.url }}" class="guest-preview">
-      <figure>
+      <figure class="guest-preview-photo">
         <img src="/assets/images/guests{{ interview.id }}.jpg"/>
         <figcaption>{{ interview.title }}</figcaption>
       </figure>
+
       <p class="guest-preview-quote">{{ interview.quote }}</p>
     </a>
   {% endfor %}
 </section>
 
-<aside id="layout-options">
-  Change the <a class="layout-toggle">layout</a>?
+<aside class="guest-layout-options">
+  Change the <a class="guestlayout-toggle" href="#">layout</a>?
 </aside>

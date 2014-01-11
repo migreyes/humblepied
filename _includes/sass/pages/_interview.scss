@@ -1,16 +1,19 @@
 @import 'globals/mixins';
 
-#guest {
+// Interview ————————————————————————————————— •
+// ——————————————————————————————————————————— •
+
+.guest {
   margin: 0 auto;
   max-width: 960px;
   width: 100%;
 }
 
-#guest-header {
+.guest-header {
+  display: none;
 
-  h3, h4, .guest-nav { display: none; }
-
-  h3, .guest-nav-pagination {
+  h3,
+  .guest-nav-pagination {
     color: $color-green;
     font-size: .7rem;
     font-weight: bold;
@@ -19,20 +22,16 @@
     text-transform: uppercase;
   }
 
-  ul { margin: 0; }
-
-  h4, li p {
+  h4,
+  .guest-nav-link p {
     font-family: $font-tisa;
     font-size: .8rem;
     font-weight: normal;
   }
-
-  .guest-nav-pagination { display: block; }
 }
 
-.guest-nav {
-
-  li { display: inline-block; }
+.guest-nav-link {
+  display: inline-block;
 
   a {
     @include border-box;
@@ -52,40 +51,38 @@
     }
   }
 }
+.guest-nav-pagination { display: block; }
 
-#guest-presentation {
+.guest-presentation {
   @include animate(fade-in-up .5s .5s both);
 
   hr { display: none; }
 }
 
-#guest-video {
-  margin-bottom: 1rem;
+.guest-video { margin-bottom: 1rem; }
+.guest-video-embed {
+  background-color: white;
+  height: 0;
+  padding-bottom: 80%;
+  overflow: hidden;
+  position: relative;
 
-  .embedded-video {
+  iframe {
     background-color: white;
-    height: 0;
-    padding-bottom: 80%;
-    overflow: hidden;
-    position: relative;
-
-    iframe {
-      background-color: white;
-      height: 100%;
-      left: 0;
-      position: absolute;
-      top: 0;
-      width: 100%;
-    }
-
-   &.with-vertical-aspect-fix { padding-bottom: 80.5%; }
-   &.with-horizontal-aspect-fix { padding-bottom: 79.15%; }
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
   }
 }
+.guest-video-aspect-vertical { padding-bottom: 80.5%; }
+.guest-video-aspect-horizontal { padding-bottom: 79.15%; }
 
-#guest-bio {
+.guest-info {
 
-  h5, h6 {
+  h5,
+  h6 {
     color: $color-green;
     font-family: $font-tisa;
     font-size: .7rem;
@@ -94,14 +91,13 @@
     text-transform: uppercase;
   }
 
-  .biography, ul { margin-bottom: 2rem; }
+  ul { margin-bottom: 2rem; }
 
-  .biography, li {
+  li {
     font-size: .9rem;
     line-height: 1.2rem;
+    list-style: none;
   }
-
-  li { list-style: none; }
 
   figure { width: 50%; }
 
@@ -109,19 +105,21 @@
     height: auto;
     width: 100%;
   }
-
-  .guest-website:before { content: 'Website, '}
-  .guest-twitter:before { content: 'Twitter, '}
-
-  .video-length {
-    font-size: .8rem;
-    margin-bottom: .5rem;
-  }
-
-  .share-on-twitter { display: none; }
 }
+.guest-info-bio {
+  font-size: .9rem;
+  line-height: 1.2rem;
+  margin-bottom: 2rem;
+}
+.guest-info-website:before { content: 'Website, '}
+.guest-info-twitter:before { content: 'Twitter, '}
+.guest-info-length {
+  font-size: .8rem;
+  margin-bottom: .5rem;
+}
+.guest-info-tweet { display: none; }
 
-#guest-quote {
+.guest-quote {
   @include animate(fade-in 1s .5s both);
   font-family: $font-tisa;
   font-size: 2.25rem;
@@ -140,10 +138,10 @@
   }
 }
 
-#guest-footer {
+.guest-footer {
   margin-bottom: 2rem;
 
-  li {
+  .guest-nav-link {
     vertical-align: top;
     text-align: center;
     width: 49%;
@@ -155,29 +153,30 @@
   }
 }
 
-// --------------------------- *
+
+// Interview: Tablet ————————————————————————— •
+// ——————————————————————————————————————————— •
+
 @include responsive-break-point(641px) {
-  #guest-header {
+  .guest-header {
+    display: block;
     margin-bottom: 1rem;
     min-height: 2rem;
     position: relative;
     width: 100%;
-
-    .guest-nav { display: block; }
   }
 
   .guest-nav {
+    display: block;
     position: absolute;
     right: .75rem;
     top: -.75rem;
     width: 20rem;
-
-    li { width: 9.5rem; }
-
-    a { @include transition(all .25s ease); }
   }
+  .guest-nav-link { width: 9.5rem; }
+  .guest-nav-link a { @include transition(all .25s ease); }
 
-  #guest-presentation {
+  .guest-presentation {
     @include clearfix;
     position: relative;
 
@@ -191,14 +190,14 @@
     }
   }
 
-  #guest-video {
+  .guest-video {
     height: auto;
     margin-bottom: 0;
-    max-width: 612px;
     overflow: hidden;
+    max-width: 612px;
   }
 
-  #guest-bio {
+  .guest-info {
     position: absolute;
     right: 0;
     top: 1.5rem;
@@ -213,14 +212,13 @@
     p + p {
       margin-top: .75em;
     }
-
-    .share-on-twitter {
-      display: block;
-      margin-top: 1rem;
-    }
+  }
+  .guest-info-tweet {
+    display: block;
+    margin-top: 1rem;
   }
 
-  #guest-quote {
+  .guest-quote {
     font-size: 4.5rem;
     margin-top: 3rem;
     padding: 0;
@@ -231,14 +229,14 @@
     }
   }
 
-  #guest-footer { display: none; }
+  .guest-footer { display: none; }
 }
 
-// --------------------------- *
+
+// Interview: Desktop ———————————————————————— •
+// ——————————————————————————————————————————— •
+
 @include responsive-break-point(740px) {
-
-  #guest-header {
-
-    h3, h4 { display: block; }
-  }
+  .guest-header h3,
+  .guest-header h4 { display: block; }
 }
