@@ -14,7 +14,7 @@
               <li class="guest-nav-link">
                 <a href="{{ page.previous.url }}" title="Hear advice from {{ page.previous.title }}. Keyboard shortcut: &larr;" data-previous-guest>
                   <span class="guest-nav-pagination">Previous</span>
-                  <p>{{ page.previous.title }}</p>
+                  <p data-previous-guest-name>{{ page.previous.title }}</p>
                 </a>
               </li>
             {% endif %}
@@ -23,7 +23,7 @@
               <li class="guest-nav-link">
                 <a href="{{ page.next.url }}" title="Hear advice from {{ page.next.title }}. Keyboard shortcut: &rarr;" data-next-guest>
                   <span class="guest-nav-pagination">Next</span>
-                  <p>{{ page.next.title }}</p>
+                  <p data-next-guest-name>{{ page.next.title }}</p>
                 </a>
               </li>
             {% endif %}
