@@ -1,11 +1,14 @@
 title: Humble Pied
 subtitle: "One inspiring creative sharing one piece of advice, all over video chat."
-author: Mig Reyes
 description: "One inspiring creative sharing one piece of advice, all over video chat."
 
-source: .
+author: Mig Reyes
+github: http://github.com/migreyes/humblepied
+twitter: http://twitter.com/migreyes
+
+source: ./_source
 destination: public
-exclude: [.DS_Store, .gitignore, .sass-cache, _drafts, _site, public, Gemfile, Gemfile.lock, Rakefile, README.md]
+exclude: [public, Gemfile, Gemfile.lock, Rakefile, README.md]
 
 permalink: /:categories/:title
 markdown: rdiscount
