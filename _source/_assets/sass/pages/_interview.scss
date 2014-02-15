@@ -111,11 +111,15 @@
 }
 .guest-info-website:before { content: 'Website, '}
 .guest-info-twitter:before { content: 'Twitter, '}
-.guest-info-length {
+.guest-info-length,
+.guest-info-tweet {
   font-size: .8rem;
   margin-bottom: .5rem;
 }
-.guest-info-tweet { display: none; }
+.guest-info-tweet {
+  display: none;
+  padding-top: 1em;
+}
 
 .guest-quote {
   @include animate(fade-in 1s .5s both);
@@ -211,10 +215,8 @@
       margin-top: .75em;
     }
   }
-  .guest-info-tweet {
-    display: block;
-    margin-top: 1rem;
-  }
+
+  .guest-info-tweet { display: block; }
 
   .guest-quote {
     font-size: 4.5rem;
