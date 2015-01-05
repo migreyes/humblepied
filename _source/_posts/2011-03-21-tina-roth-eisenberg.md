@@ -1,7 +1,7 @@
 ---
 title: "Tina Roth Eisenberg"
 label: Founder of Tattly, CreativeMornings, Studiomates
-site: swissmiss.com
+site: swiss-miss.com
 twitter: swissmiss
 layout: interview
 time: "2:26"
