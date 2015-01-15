@@ -4,7 +4,7 @@ layout: default
 ---
 <section class="guests">
   {% for interview in site.posts %}
-    <a href="{{ interview.url }}" class="guest-preview">
+    <a href="{{ interview.url }}/" class="guest-preview">
       <figure class="guest-preview-photo">
         <img src="/assets/images/guests{{ interview.id }}.jpg"/>
         <figcaption>{{ interview.title }}</figcaption>
