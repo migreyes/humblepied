@@ -4,6 +4,7 @@
 @import
   'globals/mixins',
   'globals/reset',
+  'globals/fonts',
   'globals/animations';
 
 
@@ -14,7 +15,7 @@ body {
   @include border-box;
   @include font-smoothing(antialiased);
   color: #666;
-  font-family: $font-dagny;
+  font-family: $font-fakt;
   padding: 0 20px;
 }
 

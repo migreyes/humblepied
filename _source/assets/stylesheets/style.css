@@ -63,30 +63,70 @@ hr {
 input, select {
   vertical-align: middle; }
 
+@font-face {
+  font-family: 'GT Sectra';
+  font-style: normal;
+  font-weight: normal;
+  src: url("/assets/fonts/GT-Sectra-Regular.woff") format("woff"); }
+
+@font-face {
+  font-family: 'GT Sectra';
+  font-style: italic;
+  font-weight: normal;
+  src: url("/assets/fonts/GT-Sectra-Regular-Italic.woff") format("woff"); }
+
+@font-face {
+  font-family: 'GT Sectra';
+  font-style: normal;
+  font-weight: bold;
+  src: url("/assets/fonts/GT-Sectra-Bold.woff") format("woff"); }
+
+@font-face {
+  font-family: 'Fakt Pro';
+  font-style: normal;
+  font-weight: normal;
+  src: url("/assets/fonts/FaktPro-Normal.woff") format("woff"); }
+
+@font-face {
+  font-family: 'Fakt Pro';
+  font-style: italic;
+  font-weight: normal;
+  src: url("/assets/fonts/FaktPro-NormalItalic.woff") format("woff"); }
+
+@font-face {
+  font-family: 'Fakt Pro';
+  font-style: normal;
+  font-weight: bold;
+  src: url("/assets/fonts/FaktPro-Bold.woff") format("woff"); }
+
 @keyframes fade-in {
   0% {
     opacity: 0; }
 
   100% {
     opacity: 1; } }
+
 @-o-keyframes fade-in {
   0% {
     opacity: 0; }
 
   100% {
     opacity: 1; } }
+
 @-moz-keyframes fade-in {
   0% {
     opacity: 0; }
 
   100% {
     opacity: 1; } }
+
 @-webkit-keyframes fade-in {
   0% {
     opacity: 0; }
 
   100% {
     opacity: 1; } }
+
 @-webkit-keyframes fade-in-up {
   0% {
     opacity: 0;
@@ -95,6 +135,7 @@ input, select {
   100% {
     opacity: 1;
     -webkit-transform: translateY(0); } }
+
 @-moz-keyframes fade-in-up {
   0% {
     opacity: 0;
@@ -103,6 +144,7 @@ input, select {
   100% {
     opacity: 1;
     -moz-transform: translateY(0); } }
+
 @-o-keyframes fade-in-up {
   0% {
     opacity: 0;
@@ -111,6 +153,7 @@ input, select {
   100% {
     opacity: 1;
     -o-transform: translateY(0); } }
+
 @keyframes fade-in-up {
   0% {
     opacity: 0;
@@ -119,6 +162,7 @@ input, select {
   100% {
     opacity: 1;
     transform: translateY(0); } }
+
 body {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -126,7 +170,7 @@ body {
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
   color: #666;
-  font-family: "ff-dagny-web-pro-1", "ff-dagny-web-pro-2", Tahoma, Helvetica, sans-serif;
+  font-family: "Fakt Pro", Helvetica, Lucida, sans-serif;
   padding: 0 20px; }
 
 a {
@@ -175,13 +219,13 @@ a {
     -moz-transition: all 0.2s ease;
     -ms-transition: all 0.2s ease;
     transition: all 0.2s ease;
-    background: url("/assets/images/icons/video.png") 8.2rem 0.4rem no-repeat;
+    background: url("/assets/images/icons/video.png") 9rem 0.25rem no-repeat;
     background-size: 26px 16px;
     display: block;
     color: #555;
     padding: .5rem 0 .1rem; }
     .nav-logo a:hover {
-      background-position: 8.5rem .4rem;
+      background-position: 9.1rem .25rem;
       color: #5dc20e; }
 
 .nav-list {
@@ -209,9 +253,8 @@ a {
   -ms-transition: all 0.2s ease;
   transition: all 0.2s ease;
   color: #666;
-  font-family: "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", Georgia, Times, serif;
+  font-family: "GT Sectra", Georgia, Times, serif;
   font-size: .9rem;
-  font-style: italic;
   font-weight: normal;
   line-height: 1.2em;
   margin-top: .75rem;
@@ -234,12 +277,12 @@ a {
     width: 15rem; }
     .nav-logo a {
       background-size: 40px 25px;
-      background-position: 13rem .6rem;
+      background-position: 13.75rem .4rem;
       display: block;
       margin: -1rem;
       padding: 1rem; }
       .nav-logo a:hover {
-        background-position: 13.25rem .6rem; }
+        background-position: 13.8rem .4rem; }
 
   .nav-links {
     float: right;
@@ -297,12 +340,15 @@ a {
     top: 2.9rem; }
 
   .nav-info {
-    font-size: 1.3rem;
-    line-height: 1.2em; } }
+    display: block;
+    font-size: 1.2rem;
+    line-height: 1em;
+    margin-top: .9em; } }
 .footer {
   font-size: .8rem;
   line-height: 1.25em;
   margin-bottom: 2rem;
+  padding-bottom: 4em;
   text-align: center;
   max-width: 960px;
   width: 100%; }
@@ -310,6 +356,8 @@ a {
     color: #333; }
   .footer a:not(.footer-home) {
     text-decoration: underline; }
+  .footer p {
+    margin-bottom: 1em; }
 
 .footer-home {
   font-weight: bold; }
@@ -317,10 +365,14 @@ a {
 @media only screen and (min-width: 641px) {
   .footer {
     font-size: 1rem;
-    margin: 2rem auto; }
+    line-height: 1.5em;
+    margin: 2rem auto;
+    text-align: left; }
     .footer a {
       margin: -.5rem;
-      padding: .5rem; } }
+      padding: .5rem; }
+    .footer p {
+      margin-bottom: .25em; } }
 .guests {
   -webkit-animation: fade-in 0.5s 0.2s both;
   -moz-animation: fade-in 0.5s 0.2s both;
@@ -357,8 +409,9 @@ a {
   -ms-backface-visibility: hidden;
   backface-visibility: hidden;
   color: #666;
-  font-family: "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", Georgia, Times, serif;
-  line-height: 1.2em; }
+  font-family: "GT Sectra", Georgia, Times, serif;
+  line-height: 1.2em;
+  padding-top: .5em; }
 
 .guest-layout-options {
   display: none; }
@@ -442,7 +495,7 @@ a {
     text-transform: uppercase; }
   .guest-header h4,
   .guest-header .guest-nav-link p {
-    font-family: "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", Georgia, Times, serif;
+    font-family: "GT Sectra", Georgia, Times, serif;
     font-size: .8rem;
     font-weight: normal; }
 
@@ -504,7 +557,7 @@ a {
 .guest-info h5,
 .guest-info h6 {
   color: #5dc20e;
-  font-family: "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", Georgia, Times, serif;
+  font-family: "GT Sectra", Georgia, Times, serif;
   font-size: .7rem;
   letter-spacing: 3px;
   margin-bottom: .5rem;
@@ -547,9 +600,9 @@ a {
   -ms-animation: fade-in 1s 0.5s both;
   -o-animation: fade-in 1s 0.5s both;
   animation: fade-in 1s 0.5s both;
-  font-family: "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", Georgia, Times, serif;
+  font-family: "GT Sectra", Georgia, Times, serif;
   font-size: 2.25rem;
-  letter-spacing: -.15rem;
+  letter-spacing: -.1rem;
   line-height: 1em;
   margin: 4rem auto;
   padding-left: .35rem;
@@ -657,7 +710,7 @@ a {
 .blurb {
   margin-bottom: 2em; }
   .blurb h2 {
-    font-family: "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", Georgia, Times, serif;
+    font-family: "GT Sectra", Georgia, Times, serif;
     margin-bottom: .5em;
     margin-top: 1em; }
   .blurb p {
@@ -672,7 +725,7 @@ a {
     max-width: 600px; }
     .blurb h2 {
       font-size: 1.25rem;
-      font-family: "ff-dagny-web-pro-1", "ff-dagny-web-pro-2", Tahoma, Helvetica, sans-serif;
+      font-family: "Fakt Pro", Helvetica, Lucida, sans-serif;
       letter-spacing: -.05rem;
       margin-bottom: .75rem; }
     .blurb p {

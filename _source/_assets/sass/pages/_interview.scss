@@ -22,7 +22,7 @@
 
   h4,
   .guest-nav-link p {
-    font-family: $font-tisa;
+    font-family: $font-sectra;
     font-size: .8rem;
     font-weight: normal;
   }
@@ -82,7 +82,7 @@
   h5,
   h6 {
     color: $color-green;
-    font-family: $font-tisa;
+    font-family: $font-sectra;
     font-size: .7rem;
     letter-spacing: 3px;
     margin-bottom: .5rem;
@@ -123,9 +123,9 @@
 
 .guest-quote {
   @include animate(fade-in 1s .5s both);
-  font-family: $font-tisa;
+  font-family: $font-sectra;
   font-size: 2.25rem;
-  letter-spacing: -.15rem;
+  letter-spacing: -.1rem;
   line-height: 1em;
   margin: 4rem auto;
   padding-left: .35rem;

@@ -5,12 +5,17 @@
   font-size: .8rem;
   line-height: 1.25em;
   margin-bottom: 2rem;
+  padding-bottom: 4em;
   text-align: center;
   max-width: 960px;
   width: 100%;
 
   a:hover { color: #333; }
   a:not(.footer-home) { text-decoration: underline; }
+
+  p {
+    margin-bottom: 1em;
+  }
 }
 
 .footer-home { font-weight: bold; }
@@ -22,11 +27,17 @@
 @include responsive-break-point(641px) {
   .footer {
     font-size: 1rem;
+    line-height: 1.5em;
     margin: 2rem auto;
+    text-align: left;
 
     a {
       margin: -.5rem;
       padding: .5rem;
+    }
+
+    p {
+      margin-bottom: .25em;
     }
   }
 }

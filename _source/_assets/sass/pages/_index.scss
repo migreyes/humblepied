@@ -29,8 +29,9 @@
 .guest-preview-quote {
   @include backface-visibility;
   color: #666;
-  font-family: $font-tisa;
+  font-family: $font-sectra;
   line-height: 1.2em;
+  padding-top: .5em;
 }
 
 .guest-layout-options { display: none; }
