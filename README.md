@@ -53,4 +53,4 @@ Special thanks to all of the amazing guests:
 / [Carlos Segura](http://humblepied.com//carlos-segura)
 / [Nick Campbell](http://humblepied.com//nick-campbell)
 
-You can follow Mig on Twitter, [@migreyes](http://twitter.com/migreyes).
+You can follow Mig on [Instagram](http://instagram.com/migreyes) and [Twitter](http://twitter.com/migreyes).
