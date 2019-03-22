@@ -7,10 +7,33 @@ github: http://github.com/migreyes/humblepied
 instagram: http://instagram.com/migreyes
 twitter: http://twitter.com/migreyes
 
-source: ./_source
+# Compile Settings
+source:      _source
 destination: public
-exclude: [public, Gemfile, Gemfile.lock, Rakefile, README.md]
+exclude:     [public, Gemfile, Gemfile.lock, Rakefile, README.md]
 
-permalink: /:categories/:title
-markdown: rdiscount
-pygments: true
+markdown:  rdiscount
+permalink: /:categories/:title/
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      title: "Mig Reyes, Design Director at Sprout Social"
+      layout: "default"
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+
+plugins:
+  - jekyll-coffeescript
+
+sass:
+  style:    :compressed
+  sass_dir: assets/stylesheets
